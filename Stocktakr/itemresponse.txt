@@ -1,0 +1,1000 @@
+INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1','AWAFK.BLU.XL','Ablaze With Azure French Knicker','0','27.2273','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10','FV0147.Slate.L','Alissa Thong','0','54.5000','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('100','15-564.BLU.M','Artistry Brief in Blue','0','34.5000','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1000','75-538.Polka.40','Coral in Polka Dot','0','40.8636','2','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10000','AA4201.WHE.30DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10001','AA4201.WHE.30E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10002','AA4201.WHE.30F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10003','AA4201.WHE.30FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10004','AA4201.WHE.30G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10005','AA4201.WHE.32D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10006','AA4201.WHE.32DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10007','AA4201.WHE.32E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10008','AA4201.WHE.32F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10009','AA4201.WHE.32FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1001','75-538.Polka.40','Coral in Polka Dot','0','40.8636','2','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10010','AA4201.WHE.32G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10011','AA4201.WHE.34D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10012','AA4201.WHE.34DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10013','AA4201.WHE.34E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10014','AA4201.WHE.28D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10015','AA4201.WHE.34F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10016','AA4201.WHE.34FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10017','AA4201.WHE.34G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10018','AA4201.WHE.28DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10019','AA4201.WHE.36D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1002','75-538.Polka.40','Coral in Polka Dot','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10020','AA4201.WHE.36DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10021','AA4201.WHE.36E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10022','AA4201.WHE.36F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10023','AA4201.WHE.36FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10024','AA4201.WHE.36G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10025','AA4201.WHE.28E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10026','AA4201.WHE.38D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10027','AA4201.WHE.38DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10028','AA4201.WHE.38E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10029','AA4201.WHE.38F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1003','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10030','AA4201.WHE.38FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10031','AA4201.WHE.28F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10032','AA4201.WHE.38G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10033','AA4201.WHE.28FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10034','AA4201.BLK.28G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10035','AA4201.BLK.30D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10036','AA4201.BLK.30DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10037','AA4201.BLK.30E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10038','AA4201.BLK.30F','Faye','0','72.6818','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10039','AA4201.BLK.30FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1004','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10040','AA4201.BLK.30G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10041','AA4201.BLK.32D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10042','AA4201.BLK.32DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10043','AA4201.BLK.32E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10044','AA4201.BLK.32F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10045','AA4201.BLK.32FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10046','AA4201.BLK.32G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10047','AA4201.BLK.34D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10048','AA4201.BLK.34DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10049','AA4201.BLK.34E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1005','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10050','AA4201.BLK.28D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10051','AA4201.BLK.34F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10052','AA4201.BLK.34FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10053','AA4201.BLK.34G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10054','AA4201.BLK.28DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10055','AA4201.BLK.36D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10056','AA4201.BLK.36DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10057','AA4201.BLK.36E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10058','AA4201.BLK.36F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10059','AA4201.BLK.36FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1006','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10060','AA4201.BLK.36G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10061','AA4201.BLK.28E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10062','AA4201.BLK.38D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10063','AA4201.BLK.38DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10064','AA4201.BLK.38E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10065','AA4201.BLK.38F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10066','AA4201.BLK.38FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10067','AA4201.BLK.28F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10068','AA4201.BLK.38G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10069','AA4201.BLK.28FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1007','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10070','AA4201.NUE.28G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10071','AA4201.NUE.30D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10072','AA4201.NUE.30DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10073','AA4201.NUE.30E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10074','AA4201.NUE.30F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10075','AA4201.NUE.30FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10076','AA4201.NUE.30G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10077','AA4201.NUE.32D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10078','AA4201.NUE.32DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10079','AA4201.NUE.32E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1008','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10080','AA4201.NUE.32F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10081','AA4201.NUE.32FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10082','AA4201.NUE.32G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10083','AA4201.NUE.34D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10084','AA4201.NUE.34DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10085','AA4201.NUE.34E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10086','AA4201.NUE.28D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10087','AA4201.NUE.34F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10088','AA4201.NUE.34FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10089','AA4201.NUE.34G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1009','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10090','AA4201.NUE.28DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10091','AA4201.NUE.36D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10092','AA4201.NUE.36DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10093','AA4201.NUE.36E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10094','AA4201.NUE.36F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10095','AA4201.NUE.36FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10096','AA4201.NUE.36G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10097','AA4201.NUE.28E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10098','AA4201.NUE.38D','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10099','AA4201.NUE.38DD','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('101','15-56.Jet.S','Artistry Brief in Jet/Pink','0','36.3182','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1010','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10100','AA4201.NUE.38E','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10101','AA4201.NUE.38F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10102','AA4201.NUE.38FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10103','AA4201.NUE.28F','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10104','AA4201.NUE.38G','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10105','AA4201.NUE.28FF','Faye','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10106','AA4205.BLK.XS','Faye Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10107','AA4205.BLK.S','Faye Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10108','AA4205.BLK.M','Faye Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10109','AA4205.BLK.L','Faye Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1011','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10110','AA4205.BLK.XL','Faye Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10111','AA4205.NUE.XS','Faye Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10112','AA4205.NUE.S','Faye Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10113','AA4205.NUE.M','Faye Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10114','AA4205.NUE.L','Faye Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10115','AA4205.NUE.XL','Faye Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10116','AA4202.BLK.28GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10117','AA4202.BLK.28H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10118','AA4202.BLK.28HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10119','AA4202.BLK.28J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1012','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10120','AA4202.BLK.30GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10121','AA4202.BLK.30H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10122','AA4202.BLK.34K','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10123','AA4202.BLK.36K','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10124','AA4202.BLK.30HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10125','AA4202.BLK.32K','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10126','AA4202.BLK.30J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10127','AA4202.BLK.30JJ','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10128','AA4202.BLK.36JJ','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10129','AA4202.BLK.32JJ','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1013','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10130','AA4202.BLK.34JJ','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10131','AA4202.BLK.30K','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10132','AA4202.BLK.32GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10133','AA4202.BLK.32H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10134','AA4202.BLK.32HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10135','AA4202.BLK.32J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10136','AA4202.BLK.34GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10137','AA4202.BLK.34H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10138','AA4202.BLK.34HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10139','AA4202.BLK.34J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1014','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10140','AA4202.BLK.36GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10141','AA4202.BLK.36H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10142','AA4202.BLK.36HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10143','AA4202.BLK.36J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10144','AA4202.BLK.38GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10145','AA4202.BLK.38H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10146','AA4202.BLK.38HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10147','AA4202.BLK.38J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10148','AA4202.NUE.28GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10149','AA4202.NUE.28H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1015','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10150','AA4202.NUE.28HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10151','AA4202.NUE.28J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10152','AA4202.NUE.30GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10153','AA4202.NUE.30H','Faye GG-K','0','72.6818','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10154','AA4202.NUE.34K','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10155','AA4202.NUE.36K','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10156','AA4202.NUE.30HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10157','AA4202.NUE.32K','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10158','AA4202.NUE.30J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10159','AA4202.NUE.30JJ','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1016','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10160','AA4202.NUE.36JJ','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10161','AA4202.NUE.32JJ','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10162','AA4202.NUE.34JJ','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10163','AA4202.NUE.30K','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10164','AA4202.NUE.32GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10165','AA4202.NUE.32H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10166','AA4202.NUE.32HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10167','AA4202.NUE.32J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10168','AA4202.NUE.34GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10169','AA4202.NUE.34H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1017','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10170','AA4202.NUE.34HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10171','AA4202.NUE.34J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10172','AA4202.NUE.36GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10173','AA4202.NUE.36H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10174','AA4202.NUE.36HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10175','AA4202.NUE.36J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10176','AA4202.NUE.38GG','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10177','AA4202.NUE.38H','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10178','AA4202.NUE.38HH','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10179','AA4202.NUE.38J','Faye GG-K','0','72.6818','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1018','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10180','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10181','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10182','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10183','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10184','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10185','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10186','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10187','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10188','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10189','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1019','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10190','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10191','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10192','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10193','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10194','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10195','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10196','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10197','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10198','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10199','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('102','15-56.Jet.XL','Artistry Brief in Jet/Pink','0','36.3182','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1020','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10200','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10201','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10202','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10203','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10204','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10205','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10206','AS3149.Lipstk.3','Flamingo Bandeau Bikini Top','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10207','AS3153.Lipstk.X','Flamingo Fold Brief','0','49.9545','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10208','AS3153.Lipstk.S','Flamingo Fold Brief','0','49.9545','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10209','AS3153.Lipstk.M','Flamingo Fold Brief','0','49.9545','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1021','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10210','AS3153.Lipstk.L','Flamingo Fold Brief','0','49.9545','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10211','AS3153.Lipstk.X','Flamingo Fold Brief','0','49.9545','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10212','AS3150.Lipstk.2','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10213','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10214','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10215','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10216','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10217','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10218','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10219','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1022','75-538.LiSnow.3','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10220','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10221','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10222','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10223','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10224','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10225','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10226','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10227','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10228','AS3150.Lipstk.2','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10229','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1023','75-538.LiSnow.4','Coral in Polka Dot','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10230','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10231','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10232','AS3150.Lipstk.2','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10233','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10234','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10235','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10236','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10237','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10238','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10239','AS3150.Lipstk.2','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1024','75-538.LiSnow.4','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10240','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10241','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10242','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10243','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10244','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10245','AS3150.Lipstk.2','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10246','AS3150.Lipstk.3','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10247','AS3150.Lipstk.2','Flamingo Halter Bikini','0','68.1364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10248','AS3152.Lipstk.X','Flamingo Tie Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10249','AS3152.Lipstk.S','Flamingo Tie Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1025','75-538.LiSnow.4','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10250','AS3152.Lipstk.M','Flamingo Tie Brief','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10251','AS3152.Lipstk.L','Flamingo Tie Brief','0','40.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10252','GD3050.BLK.42D','Floral Lace Soft Cup','0','59.0455','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10253','GD3050.NUE.42D','Floral Lace Soft Cup','0','59.0455','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10254','GD3050.NUE.42DD','Floral Lace Soft Cup','0','59.0455','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10255','GD3050.NUE.44E','Floral Lace Soft Cup','0','59.0455','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10256','GD3050.NUE.46DD','Floral Lace Soft Cup','0','59.0455','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10257','161.WHE.32D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10258','161.WHE.32DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10259','161.WHE.32E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1026','75-538.LiSnow.4','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10260','161.WHE.32F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10261','161.WHE.32G','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10262','161.WHE.34D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10263','161.WHE.34DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10264','161.WHE.34E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10265','161.WHE.34F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10266','161.WHE.34G','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10267','161.WHE.36D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10268','161.WHE.36DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10269','161.WHE.36E','Florence U/W Nursing Bra','0','70.8636','2','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1027','75-538.LiSnow.4','Coral in Polka Dot','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10270','161.WHE.36F','Florence U/W Nursing Bra','0','70.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10271','161.WHE.36G','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10272','161.WHE.38D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10273','161.WHE.38DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10274','161.WHE.38E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10275','161.WHE.38F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10276','161.WHE.38G','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10277','161.WHE.40D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10278','161.WHE.40DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10279','161.WHE.40E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1028','8030BR.Purple.3','Coral Purple','0','40.8637','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10280','161.WHE.40F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10281','161.WHE.40G','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10282','161.BLK.32D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10283','161.BLK.32DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10284','161.BLK.32E','Florence U/W Nursing Bra','0','70.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10285','161.BLK.32F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10286','161.BLK.32G','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10287','161.BLK.34D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10288','161.BLK.34DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10289','161.BLK.34E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1029','8030BR.Purple.3','Coral Purple','0','40.8637','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10290','161.BLK.34F','Florence U/W Nursing Bra','0','70.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10291','161.BLK.34G','Florence U/W Nursing Bra','0','70.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10292','161.BLK.36D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10293','161.BLK.36DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10294','161.BLK.36E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10295','161.BLK.36F','Florence U/W Nursing Bra','0','70.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10296','161.BLK.36G','Florence U/W Nursing Bra','0','70.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10297','161.BLK.38D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10298','161.BLK.38DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10299','161.BLK.38E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('103','15-564.SLVCN.XL','Artistry Brief in Silvercoin','0','36.3182','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1030','8030BR.Purple.3','Coral Purple','0','40.8637','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10300','161.BLK.38F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10301','161.BLK.38G','Florence U/W Nursing Bra','0','70.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10302','161.BLK.40D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10303','161.BLK.40DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10304','161.BLK.40E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10305','161.BLK.40F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10306','161.BLK.40G','Florence U/W Nursing Bra','0','70.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10307','161.NUE.32D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10308','161.NUE.32DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10309','161.NUE.32E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1031','8030BR.Purple.3','Coral Purple','0','40.8637','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10310','161.NUE.32F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10311','161.NUE.32G','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10312','161.NUE.34D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10313','161.NUE.34DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10314','161.NUE.34E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10315','161.NUE.34F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10316','161.NUE.34G','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10317','161.NUE.36D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10318','161.NUE.36DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10319','161.NUE.36E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1032','8030BR.Purple.3','Coral Purple','0','40.8637','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10320','161.NUE.36F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10321','161.NUE.36G','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10322','161.NUE.38D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10323','161.NUE.38DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10324','161.NUE.38E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10325','161.NUE.38F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10326','161.NUE.38G','Florence U/W Nursing Bra','0','70.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10327','161.NUE.40D','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10328','161.NUE.40DD','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10329','161.NUE.40E','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1033','8030BR.Purple.4','Coral Purple','0','40.8637','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10330','161.NUE.40F','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10331','161.NUE.40G','Florence U/W Nursing Bra','0','70.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10332','B5044.WHE.30D','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10333','B5044.WHE.30DD','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10334','B5044.WHE.30E','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10335','B5044.WHE.30F','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10336','B5044.WHE.32D','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10337','B5044.WHE.32DD','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10338','B5044.WHE.32E','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10339','B5044.WHE.32F','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1034','13-224.PPL/PK.X','Dandy Brief Black/Purple','0','9.0455','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10340','B5044.WHE.34D','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10341','B5044.WHE.34DD','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10342','B5044.WHE.34E','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10343','B5044.WHE.34F','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10344','B5044.WHE.36D','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10345','B5044.WHE.36DD','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10346','B5044.WHE.36E','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10347','B5044.WHE.36F','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10348','B5044.WHE.38D','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10349','B5044.WHE.38DD','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1035','9130.Capcno.34D','Darling Harbour Bikini Top','0','45.4091','2','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10350','B5044.WHE.38E','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10351','B5044.WHE.38F','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10352','B5044.BLK.30D','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10353','B5044.BLK.30DD','Focus Run','0','90.8636','2','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10354','B5044.BLK.30E','Focus Run','0','90.8636','2','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10355','B5044.BLK.30F','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10356','B5044.BLK.32D','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10357','B5044.BLK.32DD','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10358','B5044.BLK.32E','Focus Run','0','90.8636','-1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10359','B5044.BLK.32F','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1036','9135.Capcno.XS','Darling Harbour Fold Brief','0','31.7727','3','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10360','B5044.BLK.34D','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10361','B5044.BLK.34DD','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10362','B5044.BLK.34E','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10363','B5044.BLK.34F','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10364','B5044.BLK.36D','Focus Run','0','90.8636','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10365','B5044.BLK.36DD','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10366','B5044.BLK.36E','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10367','B5044.BLK.36F','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10368','B5044.BLK.38D','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10369','B5044.BLK.38DD','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1037','9135.Capcno.XL','Darling Harbour Fold Brief','0','31.7727','2','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10370','B5044.BLK.38E','Focus Run','0','90.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10371','B5044.BLK.38F','Focus Run','0','90.8636','2','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10372','434.BLK.M','Francesca Brief','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10373','434.BLK.XL','Francesca Brief','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10374','434.NUE.S','Francesca Brief','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10375','434.NUE.L','Francesca Brief','0','40.8636','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10376','334.NUE.L','Francesca Thong','0','43.5909','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10377','FRVNGS.WHE.S','French Vanilla G-String','0','32.6364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10378','FRVNGS.WHE.M','French Vanilla G-String','0','32.6364','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10379','FRVNGS.WHE.L','French Vanilla G-String','0','32.6364','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1038','9132.Capcno.34D','Darling Harbour Triangle Top','0','72.6818','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10380','FRVNGS.WHE.XL','French Vanilla G-String','0','32.6364','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10381','AA4891.WHE.28G','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10382','AA4891.WHE.28GG','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10383','AA4891.WHE.30D','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10384','AA4891.WHE.30DD','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10385','AA4891.WHE.30E','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10386','AA4891.WHE.30F','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10387','AA4891.WHE.30FF','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10388','AA4891.WHE.30G','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10389','AA4891.WHE.30GG','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1039','75-519.Purple.4','Daylight Charm','0','59.0455','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10390','AA4891.WHE.30H','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10391','AA4891.WHE.32D','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10392','AA4891.WHE.32DD','Freya Active Moulded Racer Back','0','81.7727','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10393','AA4891.WHE.32E','Freya Active Moulded Racer Back','0','81.7727','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10394','AA4891.WHE.32F','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10395','AA4891.WHE.32FF','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10396','AA4891.WHE.32G','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10397','AA4891.WHE.32GG','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10398','AA4891.WHE.32H','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10399','AA4891.WHE.34D','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('104','15-56.WHE.XL','Artistry Brief in White/Lemon','0','36.3182','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1040','F75-519.Purple.','Daylight Charm','0','59.0455','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10400','AA4891.WHE.34DD','Freya Active Moulded Racer Back','0','81.7727','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10401','AA4891.WHE.34E','Freya Active Moulded Racer Back','0','81.7727','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10402','AA4891.WHE.28D','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10403','AA4891.WHE.34F','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10404','AA4891.WHE.34FF','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10405','AA4891.WHE.34G','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10406','AA4891.WHE.34GG','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10407','AA4891.WHE.34H','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10408','AA4891.WHE.28DD','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10409','AA4891.WHE.36D','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1041','F75-519.Purple.','Daylight Charm','0','59.0455','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10410','AA4891.WHE.36DD','Freya Active Moulded Racer Back','0','81.7727','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10411','AA4891.WHE.36E','Freya Active Moulded Racer Back','0','81.7727','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10412','AA4891.WHE.36F','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10413','AA4891.WHE.36FF','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10414','AA4891.WHE.36G','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10415','AA4891.WHE.36GG','Freya Active Moulded Racer Back','0','81.7727','-1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10416','AA4891.WHE.36H','Freya Active Moulded Racer Back','0','81.7727','-1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10417','AA4891.WHE.28E','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10418','AA4891.WHE.38D','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10419','AA4891.WHE.38DD','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1042','F75-519.Purple.','Daylight Charm','0','59.0455','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10420','AA4891.WHE.38E','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10421','AA4891.WHE.38F','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10422','AA4891.WHE.38FF','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10423','AA4891.WHE.28F','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10424','AA4891.WHE.38G','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10425','AA4891.WHE.38GG','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10426','AA4891.WHE.40D','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10427','AA4891.WHE.28FF','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10428','AA4891.WHE.40DD','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10429','AA4891.WHE.40E','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1043','F75-519.Purple.','Daylight Charm','0','59.0455','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10430','AA4891.WHE.40F','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10431','AA4891.WHE.40FF','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10432','AA4891.WHE.40G','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10433','AA4891.BLK.28G','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10434','AA4891.BLK.28GG','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10435','AA4891.BLK.30D','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10436','AA4891.BLK.30DD','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10437','AA4891.BLK.30E','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10438','AA4891.BLK.30F','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10439','AA4891.BLK.30FF','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('1044','F75-519.Purple.','Daylight Charm','0','59.0455','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10440','AA4891.BLK.30G','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10441','AA4891.BLK.30GG','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10442','AA4891.BLK.30H','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10443','AA4891.BLK.32D','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10444','AA4891.BLK.32DD','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10445','AA4891.BLK.32E','Freya Active Moulded Racer Back','0','81.7727','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10446','AA4891.BLK.32F','Freya Active Moulded Racer Back','0','81.7727','0','false','2012-04-09T18:15:00.18',
+               </LocalItem>
+ INSERT INTO products (code, barcode, description, cost_price, sales_price, quantity, static, modified) VALUES('10447','AA4891.BLK.32FF','Freya Active Moulded Racer Back','0','81.7727','1','false','2012-04-09T18:15:00.18',
+               </LocalItem>

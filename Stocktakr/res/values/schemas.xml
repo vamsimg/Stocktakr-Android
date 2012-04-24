@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="create_settings">
+		CREATE TABLE settings (
+			store_id VARCHAR(100) NOT NULL,
+			password VARCHAR(100) NOT NULL
+		);
+	</string>
+
+    <string name="default_settings">
+        INSERT INTO settings (store_id, password) VALUES(\'\', \'\');
+    </string>
+
+    <string name="create_products">
+		CREATE TABLE products (
+			id          INTEGER      PRIMARY KEY,
+			code        VARCHAR(100) NOT NULL,
+			barcode     VARCHAR(100) NOT NULL COLLATE NOCASE,
+			description VARCHAR(200) NOT NULL,
+			sale_price  VARCHAR(100) NOT NULL,
+			quantity    INTEGER      NOT NULL,
+			static      BOOLEAN      NOT NULL,
+			modified    VARCHAR(27)  NOT NULL
+		);
+	</string>
+
+    <string name="create_stocktake">
+		CREATE TABLE stocktake (
+			id        INTEGER      PRIMARY KEY,
+			person    VARCHAR(100) NOT NULL,
+			timestamp VARCHAR(27)  NOT NULL
+		);
+	</string>
+
+    <string name="create_stocktake_products">
+		CREATE TABLE stocktake_products (
+			id           INTEGER PRIMARY KEY,
+			stocktake_id INTEGER NOT NULL,
+			product_id   INTEGER NOT NULL
+		);
+	</string>
+
+</resources>
