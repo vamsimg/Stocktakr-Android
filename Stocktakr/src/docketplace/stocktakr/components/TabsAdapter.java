@@ -3,6 +3,8 @@ package docketplace.stocktakr.components;
 import com.actionbarsherlock.app.*;
 import com.actionbarsherlock.app.ActionBar.*;
 
+import docketplace.stocktakr.activities.PerformStocktake;
+
 import android.support.v4.app.*;
 import android.support.v4.view.*;
 import android.view.inputmethod.*;
@@ -16,7 +18,7 @@ import java.util.*;
 public class TabsAdapter extends FragmentPagerAdapter implements TabListener, ViewPager.OnPageChangeListener {
 	private final Context mContext;
 	
-	private final FragmentActivity activity;
+	//private final FragmentActivity activity;
 
 	private final ActionBar actionBar;
 
@@ -24,7 +26,7 @@ public class TabsAdapter extends FragmentPagerAdapter implements TabListener, Vi
 
 	private final ArrayList<TabInfo> mTabs = new ArrayList<TabInfo>();
 	
-	InputMethodManager input; 
+	//InputMethodManager input; 
 
 	static final class TabInfo {
 		private final Class<?> clss;
@@ -39,13 +41,13 @@ public class TabsAdapter extends FragmentPagerAdapter implements TabListener, Vi
 	public TabsAdapter(FragmentActivity activity, ActionBar actionBar, ViewPager pager) { //TabHost tabHost;
 		super(activity.getSupportFragmentManager());
 		mContext = activity;
-		this.activity = activity;
+		//this.activity = activity;
 		this.actionBar = actionBar;
 		mViewPager = pager;
 		mViewPager.setAdapter(this);
 		mViewPager.setOnPageChangeListener(this);
 		
-		input = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+		//input = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
 	}
 
 	public void addTab(String title, Class<?> clss) {
@@ -79,21 +81,21 @@ public class TabsAdapter extends FragmentPagerAdapter implements TabListener, Vi
 
         mViewPager.setCurrentItem(position);
         
-        hideKeyboard();
+        PerformStocktake.hideKeyboard();
     }
 
 	
 	public void onPageSelected(int position) {
 		actionBar.selectTab(actionBar.getTabAt(position));
 		
-		hideKeyboard();
+		PerformStocktake.hideKeyboard();
 	}
 
-	private void hideKeyboard() {
+	/*private void hideKeyboard() {
 		if ((input != null) && (activity.getCurrentFocus() != null)) {
 			input.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
 		}
-	}
+	}*/
 	
 	public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction transaction) {}
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction transaction) {}

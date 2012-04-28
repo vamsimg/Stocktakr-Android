@@ -3,19 +3,28 @@ package docketplace.stocktakr.activities;
 
 import docketplace.stocktakr.*;
 import docketplace.stocktakr.data.*;
+import docketplace.stocktakr.webservice.*;
 
 import com.actionbarsherlock.app.*;
 import com.actionbarsherlock.view.*;
 
 import android.os.*;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.*;
 import android.content.*;
 import android.database.*;
 
 
-public class Settings extends SherlockActivity {
+public class Settings extends SherlockActivity implements OnClickListener {
 	private EditText storeID;
 	private EditText password;
+	
+	private Button testConnection;
+	
+	private TestConnection  tester;
+	private TransferHandler handler;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,11 +33,17 @@ public class Settings extends SherlockActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.settings);
+        
+        handler = new TransferHandler(this, "Testing connection", "Login Success", "Login Error");
+        
+        testConnection = (Button)findViewById(R.id.test_connection);
 
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         
         loadSettings();
+        
+        testConnection.setOnClickListener(this);
     }
 
     @Override
@@ -59,24 +74,27 @@ public class Settings extends SherlockActivity {
     	storeID  = (EditText)findViewById(R.id.store_id);
         password = (EditText)findViewById(R.id.password);
         
-        Cursor results = Database.db.query("settings", new String[] {"store_id", "password"}, null, null, null, null, null);
+        AppSettings settings = Database.getSettings();
         
-        if (results.getCount() > 0) {
-        	results.moveToFirst();
-        	
-        	storeID.setText(results.getString(0));
-        	password.setText(results.getString(1));
+        if (settings != null) {
+        	storeID.setText(settings.storeID);
+        	password.setText(settings.password);
         }
-        
-        results.close();
     }
     
     private void saveSettings() {
-    	ContentValues values = new ContentValues();
-    	
-    	values.put("store_id", storeID.getText().toString());
-    	values.put("password", password.getText().toString());
-    	
-    	Database.db.update("settings", values, null, null);
+    	Database.saveSettings(storeID.getText().toString(), password.getText().toString());
     }
+
+	public void onClick(View v) {
+		if (v == testConnection) {
+			Log.d("TESTER", "starting");
+			
+			tester = new TestConnection(handler, storeID.getText().toString(), password.getText().toString());
+			
+			tester.start();
+			
+			Log.d("TESTER", "started");
+		}
+	}
 }

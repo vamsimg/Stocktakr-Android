@@ -8,10 +8,8 @@ import docketplace.stocktakr.activities.*;
 import com.actionbarsherlock.app.*;
 
 import android.os.*;
-import android.app.*;
-import android.content.*;
 import android.database.*;
-import android.text.*;
+import android.util.Log;
 import android.view.*;
 import android.view.View.*;
 import android.view.inputmethod.*;
@@ -20,10 +18,13 @@ import android.widget.TextView.*;
 
 import java.util.*;
 
-// DialogInterface.OnClickListener
-public class ScanProducts extends SherlockFragment implements OnClickListener, OnEditorActionListener, QuantityListener {
+public class ScanProducts extends SherlockFragment implements OnClickListener, OnEditorActionListener, QuantityListener, ProductInfoListener {
+	public LinearLayout productInfo;
+	public LinearLayout productNotFound;
+	
 	public EditText barcode;
 
+	public TextView notFoundBarcode;
 	public TextView scanned;
 	public TextView description;
 	public TextView salePrice;
@@ -32,11 +33,11 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 	public TextView quantityLabel;
 	public Button   updateQuantity;
 	public Button   quantityPlus, quantityMinus;
+	public Button   downloadProductInfo;
 
 	public ArrayList<StockRecord> stock;
 	
 	private StockRecord currentProduct;
-	private int         currentIndex;
 		
 	private QuantityDialog quantityDialog;
 	
@@ -51,25 +52,30 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     	View layout = inflater.inflate(R.layout.scan_stocktake, container, false);
 
-        barcode       = (EditText)layout.findViewById(R.id.stocktake_barcode);
-        scanned       = (TextView)layout.findViewById(R.id.stocktake_scanned_barcode);
-        description   = (TextView)layout.findViewById(R.id.stocktake_description_label);
-        salePrice     = (TextView)layout.findViewById(R.id.stocktake_sale_price_label);
-        quantityLabel = (TextView)layout.findViewById(R.id.quantity_label);
-        
+    	productInfo     = (LinearLayout)layout.findViewById(R.id.product_info);
+    	productNotFound = (LinearLayout)layout.findViewById(R.id.product_not_found);
+    	
+    	notFoundBarcode = (TextView)layout.findViewById(R.id.stocktake_product_not_found);
+        barcode         = (EditText)layout.findViewById(R.id.stocktake_barcode);
+        scanned         = (TextView)layout.findViewById(R.id.stocktake_scanned_barcode);
+        description     = (TextView)layout.findViewById(R.id.stocktake_description_label);
+        salePrice       = (TextView)layout.findViewById(R.id.stocktake_sale_price_label);
+        quantityLabel   = (TextView)layout.findViewById(R.id.quantity_label);
         
         updateQuantity = (Button)layout.findViewById(R.id.update_quantity);
         quantityPlus   = (Button)layout.findViewById(R.id.quantity_plus);
         quantityMinus  = (Button)layout.findViewById(R.id.quantity_minus);
         
-        quantityLabel.setVisibility(View.INVISIBLE);
-        updateQuantity.setVisibility(View.INVISIBLE);
-        quantityPlus.setVisibility(View.INVISIBLE);
-        quantityMinus.setVisibility(View.INVISIBLE);
+        downloadProductInfo = (Button)layout.findViewById(R.id.download_product_info);
+        
+        productInfo.setVisibility(View.GONE);
+        productNotFound.setVisibility(View.GONE);
         
         updateQuantity.setOnClickListener(this);
         quantityPlus.setOnClickListener(this);
         quantityMinus.setOnClickListener(this);
+        
+        downloadProductInfo.setOnClickListener(this);
 
         barcode.setOnEditorActionListener(this);
         
@@ -77,21 +83,6 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 
         return layout;
     }
-
-    private void showAlert() {
-
-		final AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
-		alertDialog.setTitle("Error");
-		alertDialog.setMessage("Could not find a product matching this code");
-
-		alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-					alertDialog.cancel();
-				}
-		});
-
-		alertDialog.show();
-	}
 
 	public void onClick(View v) {
 
@@ -101,11 +92,13 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 			changeQuantity(1);
 		} else if (v == quantityMinus) {
 			changeQuantity(-1);
+		} else if (v == downloadProductInfo) {
+			
 		}
 	}
 
-	private void searchProducts() {
-		String search = barcode.getText().toString().trim();
+	private void searchProducts(String searchBarcode) {
+		String search = searchBarcode.trim();
 
 		String productBarcode;
 		String productDescription;
@@ -115,18 +108,10 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 			Cursor results = Database.db.query("products", new String[] {"barcode", "description", "sale_price"}, "(barcode = ?)", new String[] {search}, null, null, null);
 
 			if (results.getCount() == 0) {
-				scanned.setText("");
-				description.setText("");
-				salePrice.setText("");
+				productInfo.setVisibility(View.GONE);
+				productNotFound.setVisibility(View.VISIBLE);
 				
-				quantityLabel.setVisibility(View.INVISIBLE);
-				updateQuantity.setVisibility(View.INVISIBLE);
-				quantityPlus.setVisibility(View.INVISIBLE);
-				quantityMinus.setVisibility(View.INVISIBLE);
-
-				showAlert();
-
-
+				notFoundBarcode.setText(getString(R.string.product_not_found_message) + search);
 			} else {
 				results.moveToFirst();
 
@@ -137,19 +122,20 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 				description.setText(productDescription);
 				
 				scanned.setText("Barcode: " + productBarcode);
-				salePrice.setText("Sale price: " + productSalePrice);
+				salePrice.setText("Price: " + productSalePrice);
 				
 				int count = recordStock(search, productBarcode, productDescription);
 
 				updateQuantity.setText(String.valueOf(count));
 
-				quantityLabel.setVisibility(View.VISIBLE);
-				updateQuantity.setVisibility(View.VISIBLE);
-				quantityPlus.setVisibility(View.VISIBLE);
-				quantityMinus.setVisibility(View.VISIBLE);
+				productInfo.setVisibility(View.VISIBLE);
+				productNotFound.setVisibility(View.GONE);
 			}
 
 			results.close();
+		} else {
+			productInfo.setVisibility(View.GONE);
+			productNotFound.setVisibility(View.GONE);
 		}
 	}
 	
@@ -165,7 +151,7 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 		if (newCount >= 0) {
 			currentProduct.setQuantity(newCount);
 			
-			updateQuantity.setText(String.valueOf(newCount));
+			updateQuantity.setText(" " + String.valueOf(newCount) + " ");
 			
 			RecordedProducts.refreshList();
 		}
@@ -202,22 +188,14 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 		return count;
 	}
 
-	public void afterTextChanged(Editable arg0) {}
-	public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-	public void onTextChanged(CharSequence s, int start, int before, int count) {
-		if ((s != null) && (s.length() > 0)) {
-			updateQuantity.setVisibility(View.VISIBLE);
-		}
-	}
-
-
 	public boolean onEditorAction(TextView view, int action, KeyEvent event) {
 		if (view == barcode) {
 			if ((action == EditorInfo.IME_ACTION_SEARCH) || ((event != null) && (event.getAction() == KeyEvent.ACTION_DOWN) && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER))) {
-				searchProducts();
+				searchProducts(barcode.getText().toString());
 
 				barcode.setText("");
+				
+				PerformStocktake.hideKeyboard();
 				
 				return true;
 			}
@@ -229,8 +207,14 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 	public void onChangeQuantity(int newQuantity) {
 		currentProduct.setQuantity(newQuantity);
 		
-		updateQuantity.setText(String.valueOf(newQuantity));
+		updateQuantity.setText(" " + String.valueOf(newQuantity) + " ");
 		
 		RecordedProducts.refreshList();
+	}
+
+	public void productDownloaded(String productBarcode) {
+		Log.d("SCAN", "downloaded product: " + productBarcode);
+		
+		searchProducts(productBarcode);
 	}
 }

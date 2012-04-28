@@ -8,50 +8,25 @@ import android.os.Message;
 import android.util.Log;
 
 
-public class DownloadProducts extends Thread {
-	private TransferHandler handler;
-	
-	private REST rest;
-	
-	private Settings settings;
-	
+public class DownloadProducts extends WebServiceAction {
 	public DownloadProducts(TransferHandler handler) {
-		this.handler = handler;
-	}
-	
-	private void sendMessage(TransferHandler handler, int type) {
-		Message message = handler.obtainMessage(type);
-		
-		handler.sendMessage(message);
-	}
-	
-	private void sendMessage(TransferHandler handler, int type, int arg) {
-		Message message = handler.obtainMessage(type, arg, 0);
-		
-		handler.sendMessage(message);
+		super(handler);
 	}
 	
 	private int getProductCount() {
-		//Log.d("DOWNLOAD", "getting JSON...");
-		
-		JSONObject json = rest.get("http://testdocketc.web705.discountasp.net/MobileItemHandler/ItemCount/" + settings.authentication());
-		
-		//Log.d("DOWNLOAD", "got JSON");
+		JSONObject json = rest.get("ItemCount");
 		
 		int count = 0;
 		
 		try {
 			if (json != null) {
-				//Log.d("DOWNLOAD", "not-null count JSON");
-				
 				count = json.getInt("itemCount");
-				
-				//Log.d("DOWNLOAD", "Total: " + count);
+
 			} else {
-				//Log.d("DOWNLOAD", "null count JSON");
+				Log.d("DOWNLOAD", "null count JSON");
 			}
 		} catch (JSONException je) {
-			//Log.d("DOWNLOAD", "JSON exception: " + je.getMessage());
+			Log.d("DOWNLOAD", "JSON exception: " + je.getMessage());
 		}
 		
 		return count;
@@ -68,7 +43,7 @@ public class DownloadProducts extends Thread {
 			if (count > 0) {
 				//Log.d("DOWNLOAD", "Begin product download");
 				
-				json = rest.get("http://testdocketc.web705.discountasp.net/MobileItemHandler/Items/" + settings.authentication() + "/" + start + "/" + count);
+				json = rest.get("Items", start + "/" + count);
 				
 				//Log.d("DOWNLOAD", "End product download");
 			} else {
@@ -113,12 +88,12 @@ public class DownloadProducts extends Thread {
 	
 	@Override
 	public void run() {
-		rest = new REST();
-		
 		settings = Database.getSettings();
 		
+		rest = new REST(handler, settings.storeID, settings.password);
 		
-		sendMessage(handler, TransferHandler.START);
+		
+		sendMessage(TransferHandler.START);
 		
 		int count = getProductCount();
 		
@@ -139,7 +114,7 @@ public class DownloadProducts extends Thread {
 			
 			Database.db.execSQL("DELETE FROM products;");
 			
-			sendMessage(handler, TransferHandler.BEGIN, count);
+			sendMessage(TransferHandler.BEGIN, count);
 			
 			while (i < count) {
 				if ((i + blockSize) <= count) {
@@ -154,13 +129,13 @@ public class DownloadProducts extends Thread {
 				
 				i += blockSize;
 				
-				sendMessage(handler, TransferHandler.TRANSFER, i);
+				sendMessage(TransferHandler.TRANSFER, i);
 			}
 			
 			if (success) {
-				sendMessage(handler, TransferHandler.COMPLETE);
+				sendMessage(TransferHandler.COMPLETE);
 			} else  {
-				sendMessage(handler, TransferHandler.ERROR);
+				sendMessage(TransferHandler.ERROR);
 			}
 		}
 	}

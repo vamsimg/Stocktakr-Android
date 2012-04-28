@@ -2,6 +2,7 @@ package docketplace.stocktakr.data;
 
 import java.util.ArrayList;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -30,10 +31,10 @@ public class Database {
         db.close();
     }
     
-    public static Settings getSettings() {
+    public static AppSettings getSettings() {
     	Cursor results = db.query("settings", new String[] {"store_id", "password"}, null, null, null, null, null);
     	
-    	Settings settings = new Settings();
+    	AppSettings settings = new AppSettings();
     	
     	if (results.getCount() > 0) {
     		results.moveToFirst();
@@ -43,6 +44,15 @@ public class Database {
     	}
     	
     	return settings;
+    }
+    
+    public static void saveSettings(String storeID, String password) {
+    	ContentValues values = new ContentValues();
+    	
+    	values.put("store_id", storeID);
+    	values.put("password", password);
+    	
+    	Database.db.update("settings", values, null, null);
     }
     
     public Product findProduct(String barcode) {

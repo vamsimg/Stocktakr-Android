@@ -8,7 +8,9 @@ import com.actionbarsherlock.app.*;
 import com.actionbarsherlock.view.*;
 
 import android.support.v4.view.ViewPager;
+import android.view.inputmethod.InputMethodManager;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -19,6 +21,8 @@ public class PerformStocktake extends SherlockFragmentActivity {
     private TabsAdapter mTabsAdapter;
 
     private MenuItem countMenu;
+    
+    private InputMethodManager input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +34,7 @@ public class PerformStocktake extends SherlockFragmentActivity {
 
         setContentView(R.layout.perform_stocktake);
         
-        
+        input = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
 
         ActionBar actionBar = getSupportActionBar();
 
@@ -73,5 +77,11 @@ public class PerformStocktake extends SherlockFragmentActivity {
         if ((instance != null) && (instance.countMenu != null)) {
             instance.countMenu.setTitle(String.valueOf(count));
         }
+    }
+    
+    public static void hideKeyboard() {
+		if ((instance != null) && (instance.input != null) && (instance.getCurrentFocus() != null)) {
+			instance.input.hideSoftInputFromWindow(instance.getCurrentFocus().getWindowToken(), 0);
+		}
     }
 }
