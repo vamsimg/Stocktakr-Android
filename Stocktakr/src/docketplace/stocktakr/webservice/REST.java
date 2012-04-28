@@ -33,11 +33,11 @@ public class REST {
 	}
 	
 	public JSONObject get(String request, String params) {
-		return get(WebServiceURL + request + "/" + storeID + "/" + password + "/" + params);
+		return getFullURL(WebServiceURL + request + "/" + storeID + "/" + password + "/" + params);		
 	}
 	
 	public JSONObject get(String request) {
-		return get(WebServiceURL + request + "/" + storeID + "/" + password);
+		return getFullURL(WebServiceURL + request + "/" + storeID + "/" + password);
 	}
 	
 	public JSONObject getFullURL(String request) {

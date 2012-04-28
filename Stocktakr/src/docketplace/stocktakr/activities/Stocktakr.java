@@ -40,7 +40,7 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
         priceCheck       = (Button)findViewById(R.id.price_check_button);
         
         handler = new TransferHandler(this, "Downloading Products", "Downloaded Products", "Error downloading products");
-        download = new DownloadProducts(handler);
+        download = new DownloadProducts(handler, getBaseContext());
 
         downloadProducts.setOnClickListener(this);
         performStocktake.setOnClickListener(this);
@@ -73,23 +73,9 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
     }
 
 	public void onClick(View v) {
-		if (v == downloadProducts) {
-			Database.db.execSQL("DELETE FROM products;");
-			Database.db.execSQL("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES('1','AWAFK.BLU.XL','Ablaze With Azure French Knicker','27.2273','1','false','2012-04-09T18:15:00.18');");
-			Database.db.execSQL("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES('10','FV1047.Slate.L','Alissa Thong','54.5000','1','false','2012-04-09T18:15:00.18');");
-			Database.db.execSQL("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES('100','15-564.BLU.M','Artistry Brief in Blue','34.5000','1','false','2012-04-09T18:15:00.18');");
-			Database.db.execSQL("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES('1000','75-538.Polka.40','Coral in Polka Dot','40.8636','2','false','2012-04-09T18:15:00.18');");
-			Database.db.execSQL("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES('10000','AA4201.WHE.30DD','Faye','72.6818','0','false','2012-04-09T18:15:00.18');");
-			Database.db.execSQL("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES('10001','AA4201.WHE.30E','Faye','72.6818','0','false','2012-04-09T18:15:00.18');");
-			Database.db.execSQL("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES('10002','AA4201.WHE.30F','Faye','72.6818','0','false','2012-04-09T18:15:00.18');");
-			Database.db.execSQL("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES('10003','AA4201.WHE.30FF','Faye','72.6818','0','false','2012-04-09T18:15:00.18');");
-			Database.db.execSQL("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES('10004','AA4201.WHE.30G','Faye','72.6818','0','false','2012-04-09T18:15:00.18');");
-			Database.db.execSQL("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES('10005','AA4201.WHE.32D','Faye','72.6818','0','false','2012-04-09T18:15:00.18');");
-
-			//showAlert("Download Products", "Latest product list downloaded from server.");
-			Toast.makeText(this, "Downloaded Products", Toast.LENGTH_SHORT);
-			
-			//download.start();
+		if (v == downloadProducts) {			
+			download.start();						
+			Toast.makeText(this, "Downloaded Products", Toast.LENGTH_SHORT);								
 		} else if (v == performStocktake) {
 			startActivity(new Intent(Stocktakr.this, PerformStocktake.class));
 		} else if (v == priceCheck) {

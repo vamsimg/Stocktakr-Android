@@ -29,7 +29,7 @@ public class DownloadProductInfo extends WebServiceAction {
 		
 		Log.d("PRODUCT INFO", "sending message");
 		
-		JSONObject json = rest.get("ItemInfo/" + settings.authentication() + "/" + barcode);
+		JSONObject json = rest.get("Items/" + settings.authentication() + "/" + barcode);
 		
 		Log.d("PRODUCT INFO", "got response");
 		

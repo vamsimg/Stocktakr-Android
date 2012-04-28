@@ -30,7 +30,7 @@ public class TestConnection extends WebServiceAction {
 		
 		Log.d("TESTER", "sending message");
 		
-		JSONObject json = rest.get("ItemCount");
+		JSONObject json = rest.get("TestConnection");
 		
 		Log.d("TESTER", "got response");
 		
