@@ -162,14 +162,25 @@ public class REST {
 		return null;
 	}
 	
-	public void post(String request, JSONObject json) {
+	//WebServiceURL + request + "/" + storeID + "/" + password
+	public int post(String request, JSONObject json) {
+		Log.d("REST POST", "posting to: " + WebServiceURL + request + "/" + storeID + "/" + password);
+		
+		return postFullURL(WebServiceURL + request + "/" + storeID + "/" + password, json);
+	}
+	
+	public int postFullURL(String request, JSONObject json) {
 		URL url;
 		
 		HttpURLConnection conn;
 		
 		OutputStream out;
 		
+		Log.d("REST POST", "getting bytes");
+		
 		byte[] data = json.toString().getBytes();
+	
+		Log.d("REST POST", "got bytes");
 		
 		try {
 			url = new URL(request);
@@ -186,13 +197,17 @@ public class REST {
 			
 			conn.connect();
 			
-			//tracker.begin(data.length);
+			Log.d("REST POST", "begin: "  + data.length);
+			
+			sendMessage(TransferHandler.BEGIN, data.length);
 			
 			int count;
 				
 			int blockSize = 1000;
 			
 			for (int i = 0; i < data.length; i += blockSize) {
+				Log.d("REST POST", "writing: " + i);
+				
 				if ((i + blockSize) <= data.length) {
 					count = blockSize;
 				} else {
@@ -203,32 +218,40 @@ public class REST {
 				
 				out.flush();
 				
-				//tracker.track(i);
+				Log.d("REST POST", "flushed: " + i);
+				
+				sendMessage(TransferHandler.TRANSFER, i);
 			}
 			
 			out.close();
 			
+			Log.d("REST POST", "closed otput stream");
+			
 			int responseCode = conn.getResponseCode();
+			
+			Log.d("REST POST", "Response Code: " + responseCode);
 				
 			if (responseCode != HttpURLConnection.HTTP_OK) {
 				System.out.println("Error");
 
-				//tracker.error();
-				
-				return;
-			} else {
-				//tracker.complete();
+				sendMessage(TransferHandler.ERROR);
 			}
 			
 			conn.disconnect();
+			
+			return responseCode;
 		} catch (MalformedURLException mue) {
 			//tracker.error();
+			sendMessage(TransferHandler.ERROR);
 			
-			System.err.println("malformed url");
+			Log.d("REST POST", "malformed url");
 		} catch (IOException ioe) {
 			//tracker.error();
+			sendMessage(TransferHandler.ERROR);
 			
-			System.err.println("connection error");
+			Log.d("REST POST", "connection error");
 		}
+		
+		return -1;
 	}
 }

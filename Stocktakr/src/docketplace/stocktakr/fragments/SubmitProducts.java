@@ -2,24 +2,34 @@ package docketplace.stocktakr.fragments;
 
 import docketplace.stocktakr.*;
 import docketplace.stocktakr.data.*;
+import docketplace.stocktakr.webservice.*;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
 import android.os.*;
 import android.app.*;
 import android.content.*;
+import android.util.Log;
 import android.view.*;
 import android.view.View.*;
 import android.widget.*;
 
 
 public class SubmitProducts extends SherlockFragment implements OnClickListener {
+	private static SubmitProducts instance;
+	
 	private EditText name;
 	private Button   submit;
+	private TextView productCounter;
+	
+	private SubmitStockRecords submitStock;
+	private TransferHandler    handler;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        instance = this;
     }
 	
     @Override
@@ -29,7 +39,15 @@ public class SubmitProducts extends SherlockFragment implements OnClickListener 
     	name   = (EditText)layout.findViewById(R.id.person_name);
         submit = (Button)layout.findViewById(R.id.submit_button);
         
+        productCounter = (TextView)layout.findViewById(R.id.product_counter);
+        
+        if (Database.stock.size() > 0) {
+        	productCounter.setText(instance.getString(R.string.products) + Database.stock.size());
+        }
+        
         submit.setOnClickListener(this);
+        
+        handler = new TransferHandler(this.getActivity(), "Submitting stock records", "Records submitted", "Submission Error");
         
     	return layout;
     }
@@ -50,10 +68,33 @@ public class SubmitProducts extends SherlockFragment implements OnClickListener 
 	}
 
 	public void onClick(View v) {
+		String personName;
+		
 		if (v == submit) {
-			Database.stock.clear();
+			personName = name.getText().toString().trim();
 			
-			showAlert("Submit Stocktake", "Stocktake records have been submitted to server.");
+			if (personName.length() == 0) {
+				Toast.makeText(this.getActivity(), "Please enter you name", Toast.LENGTH_SHORT).show();
+			} else {
+				Log.d("SUBMIT", "starting");
+				
+				submitStock = new SubmitStockRecords(handler, name.getText().toString());
+				
+				submitStock.start();
+				
+				Log.d("SUBMIT", "started");
+			
+			}
+		}
+	}
+	
+	public static void updateStockCount() {
+		if (instance != null) {
+			if (Database.stock.size()> 0) {
+				instance.productCounter.setText(instance.getString(R.string.products) + Database.stock.size());
+			} else {
+				instance.productCounter.setText("");
+			}
 		}
 	}
 }

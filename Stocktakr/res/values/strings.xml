@@ -20,5 +20,6 @@
 	<string name="test_connection">Test Connection</string>
 	<string name="product_not_found_message">"Could not find a product for the barcode: "</string>
 	<string name="download_product_info">Download Product Info</string>
+	<string name="products">"Products: "</string>
 	
 </resources>

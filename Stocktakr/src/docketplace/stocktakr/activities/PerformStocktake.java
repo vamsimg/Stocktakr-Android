@@ -38,8 +38,11 @@ public class PerformStocktake extends SherlockFragmentActivity {
 
         ActionBar actionBar = getSupportActionBar();
 
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        //actionBar.setHomeButtonEnabled(true);
+        //actionBar.setDisplayHomeAsUpEnabled(true);
+        
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
@@ -54,7 +57,7 @@ public class PerformStocktake extends SherlockFragmentActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        countMenu = menu.add("").setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        //countMenu = menu.add("").setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 
         return true;
     }
@@ -75,7 +78,7 @@ public class PerformStocktake extends SherlockFragmentActivity {
 
     public static void updateStockCount(int count) {
         if ((instance != null) && (instance.countMenu != null)) {
-            instance.countMenu.setTitle(String.valueOf(count));
+            //instance.countMenu.setTitle(String.valueOf(count));
         }
     }
     

@@ -61,16 +61,17 @@ public class Database {
 		String search = barcode.trim();
 		
 		if (!search.equals("")) {
-			Cursor results = Database.db.query("products", new String[] {"barcode", "description", "sale_price"}, "(barcode = ?)", new String[] {search}, null, null, null);
+			Cursor results = Database.db.query("products", new String[] {"code", "barcode", "description", "sale_price"}, "(barcode = ?)", new String[] {search}, null, null, null);
 
 			if (results.getCount() > 0) {
 				product = new Product();
 				
 				results.moveToFirst();
 
-				product.barcode     = results.getString(0);
-				product.description = results.getString(1);
-				product.price       = results.getString(2);
+				product.code        = results.getString(0);
+				product.barcode     = results.getString(1);
+				product.description = results.getString(2);
+				product.price       = results.getString(3);
 			}
 
 			results.close();

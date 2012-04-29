@@ -40,7 +40,6 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
         priceCheck       = (Button)findViewById(R.id.price_check_button);
         
         handler = new TransferHandler(this, "Downloading Products", "Downloaded Products", "Error downloading products");
-        download = new DownloadProducts(handler, getBaseContext());
 
         downloadProducts.setOnClickListener(this);
         performStocktake.setOnClickListener(this);
@@ -73,9 +72,10 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
     }
 
 	public void onClick(View v) {
-		if (v == downloadProducts) {			
-			download.start();						
-			Toast.makeText(this, "Downloaded Products", Toast.LENGTH_SHORT);								
+		if (v == downloadProducts) {
+			download = new DownloadProducts(handler, getBaseContext());
+			
+			download.start();
 		} else if (v == performStocktake) {
 			startActivity(new Intent(Stocktakr.this, PerformStocktake.class));
 		} else if (v == priceCheck) {

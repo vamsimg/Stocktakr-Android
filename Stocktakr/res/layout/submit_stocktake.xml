@@ -3,33 +3,49 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
-    
+
     <LinearLayout
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
-	    android:orientation="horizontal"
+	    android:layout_margin="8dip"
+	    android:orientation="vertical"
 	    android:layout_weight="1.0">
-
-        <TextView
-	        android:text="@string/name"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:textAppearance="?android:attr/textAppearanceMedium" />
-        
-		<EditText
-		    android:id="@+id/person_name"
-		    android:singleLine="true"
-		    android:selectAllOnFocus="true"
+    
+	    <LinearLayout
 		    android:layout_width="fill_parent"
 		    android:layout_height="wrap_content"
-		    android:ems="10"
-		    android:hint="@string/your_name"/>
+		    android:orientation="horizontal">
+	
+	        <TextView
+		        android:text="@string/name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+	        
+			<EditText
+			    android:id="@+id/person_name"
+			    android:singleLine="true"
+			    android:selectAllOnFocus="true"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:ems="10"
+			    android:hint="@string/your_name"/>
+	    </LinearLayout>
+	    
+	    <TextView
+	        android:id="@+id/product_counter"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="16dip"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
     </LinearLayout>
 
     <Button
         android:id="@+id/submit_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dip"
         android:text="@string/submit" />
 
 </LinearLayout>
