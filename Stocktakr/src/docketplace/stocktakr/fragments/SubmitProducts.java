@@ -78,7 +78,7 @@ public class SubmitProducts extends SherlockFragment implements OnClickListener 
 			} else {
 				Log.d("SUBMIT", "starting");
 				
-				submitStock = new SubmitStockRecords(handler, name.getText().toString());
+				submitStock = new SubmitStockRecords(handler, name.getText().toString(), getActivity().getBaseContext());
 				
 				submitStock.start();
 				

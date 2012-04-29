@@ -1,9 +1,27 @@
 package docketplace.stocktakr.webservice;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.util.Enumeration;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipException;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipOutputStream;
 
 import org.json.*;
 
+import android.content.Context;
+import android.util.Base64;
 import android.util.Log;
 
 import docketplace.stocktakr.data.*;
@@ -11,10 +29,11 @@ import docketplace.stocktakr.data.*;
 
 public class SubmitStockRecords extends WebServiceAction {
 	private String personName;
+	private Context currentContext;
 	
-	public SubmitStockRecords(TransferHandler handler, String personName) {	
+	public SubmitStockRecords(TransferHandler handler, String personName, Context now) {	
 		super(handler);
-		
+		currentContext = now;	
 		this.personName = personName;
 	}
 	
@@ -41,24 +60,93 @@ public class SubmitStockRecords extends WebServiceAction {
 		return json;
 	}
 	
+	
+	private String zipData(String stockList)  {
+		
+		String base64encList = null;
+		
+		try{
+			
+			 File f = new File(currentContext.getFilesDir() + "/temp.zip");
+			 ZipOutputStream out = new ZipOutputStream(new FileOutputStream(f));
+			 
+			 ZipEntry e = new ZipEntry("data");
+			  out.putNextEntry(e);
+			
+			 byte[] data = stockList.getBytes();
+			 out.write(data, 0, data.length);
+			 out.closeEntry();			
+			 out.close();
+			 
+			//Cleanup 		
+			
+			File deleteFile =  new File(currentContext.getFilesDir() + "/temp.zip");
+			
+			base64encList = Base64.encodeToString(getFileBytes(deleteFile) , Base64.DEFAULT);
+			
+			deleteFile.delete();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ZipException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return base64encList;
+	}
+	
+	private static byte[] getFileBytes(File file) throws IOException {
+	    ByteArrayOutputStream ous = null;
+	    InputStream ios = null;
+	    try {
+	        byte[] buffer = new byte[4096];
+	        ous = new ByteArrayOutputStream();
+	        ios = new FileInputStream(file);
+	        int read = 0;
+	        while ((read = ios.read(buffer)) != -1)
+	            ous.write(buffer, 0, read);
+	    } finally {
+	        try {
+	            if (ous != null)
+	                ous.close();
+	        } catch (IOException e) {
+	            // swallow, since not that important
+	        }
+	        try {
+	            if (ios != null)
+	                ios.close();
+	        } catch (IOException e) {
+	            // swallow, since not that important
+	        }
+	    }
+	    return ous.toByteArray();
+	}
+	
+	
 	@Override
 	public void run() {
-		JSONObject json = new JSONObject();
-		
 		
 		Log.d("SUBMIT", "beginning");
 		
+		
+		
+		
 		sendMessage(TransferHandler.START);
 		
-
+		
 		try {
-			json.put("transactions", buildStockList());
+		
+			String zippedTransactions = zipData(buildStockList().toString());			
 			
-			Log.d("SUBMIT", "JSON: " + json.toString(2));
 			
 			Log.d("SUBMIT", "posting");
 			
-			int responseCode = rest.post("StocktakeTransactions", json);
+			int responseCode = rest.post("ZippedStocktakeTransactions", zippedTransactions);
 			
 			Log.d("SUBMIT", "posted");
 			

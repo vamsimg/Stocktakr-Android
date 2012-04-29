@@ -831,6 +831,7 @@ containing a value of this type.
         public static final int price_check_description_label=0x7f040029;
         public static final int price_check_sale_price_label=0x7f04002b;
         public static final int price_check_scanned_barcode=0x7f04002a;
+        public static final int product_counter=0x7f040047;
         public static final int product_info=0x7f04002e;
         public static final int product_not_found=0x7f040036;
         public static final int quantity_label=0x7f04002f;
@@ -851,7 +852,7 @@ containing a value of this type.
         public static final int stocktake_scanned_barcode=0x7f040034;
         public static final int store_id=0x7f04003a;
         public static final int store_id_label=0x7f040039;
-        public static final int submit_button=0x7f040047;
+        public static final int submit_button=0x7f040048;
         public static final int tabMode=0x7f040003;
         public static final int test_connection=0x7f04003d;
         public static final int textView1=0x7f04003e;
@@ -941,6 +942,7 @@ containing a value of this type.
         public static final int perform_stocktake=0x7f090011;
         public static final int price_check=0x7f090013;
         public static final int product_not_found_message=0x7f090020;
+        public static final int products=0x7f090022;
         public static final int quantity=0x7f090015;
         public static final int quantity_for=0x7f090017;
         public static final int scan=0x7f090018;

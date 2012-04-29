@@ -2,6 +2,14 @@ package docketplace.stocktakr.webservice;
 import java.io.*;
 import java.net.*;
 
+import org.apache.http.*;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
 import org.json.*;
 
 import android.os.Message;
@@ -9,6 +17,8 @@ import android.util.Log;
 
 public class REST {
 	protected static final String WebServiceURL = "http://testdocketc.web705.discountasp.net/MobileItemHandler/"; 
+	
+	//protected static final String WebServiceURL = "http://posttestserver.com/post.php/";
 	
 	public TransferHandler handler;
 	
@@ -163,13 +173,83 @@ public class REST {
 	}
 	
 	//WebServiceURL + request + "/" + storeID + "/" + password
-	public int post(String request, JSONObject json) {
+	public int post(String request, String  data) {
 		Log.d("REST POST", "posting to: " + WebServiceURL + request + "/" + storeID + "/" + password);
 		
-		return postFullURL(WebServiceURL + request + "/" + storeID + "/" + password, json);
+		return postFullURL(WebServiceURL + request + "/" + storeID + "/" + password, data);		
 	}
 	
-	public int postFullURL(String request, JSONObject json) {
+	public int postFullURL(String request, String data)
+	{
+		// Create a new HttpClient and Post Header
+	    HttpClient httpclient = new DefaultHttpClient();
+	    HttpPost httppost = new HttpPost(request);
+
+	    try {
+	    	
+	        // Add your data
+	    		
+	    	JSONObject json  = new JSONObject();
+	    	json.put("transactions", data);
+	    		    	
+	    	StringEntity se = new StringEntity(json.toString(),HTTP.UTF_8);
+	    	se.setContentType("application/json");
+	        httppost.setEntity(se);
+
+	        // Execute HTTP Post Request
+	        HttpResponse response = httpclient.execute(httppost);
+	        
+	        Log.d("REST POST", "Response Code: " + response.getStatusLine().getStatusCode() );
+	        
+	        if(response.getStatusLine().getStatusCode() != HttpURLConnection.HTTP_OK)
+	        {
+	        	sendMessage(TransferHandler.ERROR);	        
+	        }
+	        
+	        
+	        HttpEntity responseEntity = response.getEntity();
+	        
+	        JSONObject jsonResponse = new JSONObject(EntityUtils.toString(responseEntity));
+	        
+	        try {
+				Log.d("REST", "got JSON");
+				
+				Boolean isError = jsonResponse.getBoolean("is_error");
+				String errorMessage = jsonResponse.getString("errorMessage");
+				
+				if  (isError) {
+					Log.d("REST", "error message: " + errorMessage);
+					
+					if (errorMessage.equals("NoStore")) {
+						sendMessage(TransferHandler.INCORRECT_STOREID);
+					} else if (errorMessage.equals("IncorrectPassword")) {
+						sendMessage(TransferHandler.INCORRECT_PASSWORD);
+					} else {
+						Log.d("REST", "other error");
+						
+						sendMessage(TransferHandler.ERROR);
+					}
+				} else {
+					Log.d("REST", "no error message");
+					
+					return response.getStatusLine().getStatusCode();
+				}
+			} catch (JSONException je) {
+				Log.d("REST", "JSON exception");
+				
+				sendMessage(TransferHandler.ERROR);
+			}
+	        
+	    } catch (Exception ex){
+	    	sendMessage(TransferHandler.ERROR);
+	    }    
+	    	    
+	    return -1;
+	}
+	
+	
+	
+	/*public int postFullURL(String request, JSONObject json) {
 		URL url;
 		
 		HttpURLConnection conn;
@@ -178,7 +258,8 @@ public class REST {
 		
 		Log.d("REST POST", "getting bytes");
 		
-		byte[] data = json.toString().getBytes();
+		byte[] data = "Hello World".getBytes();
+		//byte[] data = json.toString().getBytes();
 	
 		Log.d("REST POST", "got bytes");
 		
@@ -254,4 +335,5 @@ public class REST {
 		
 		return -1;
 	}
+	*/
 }
