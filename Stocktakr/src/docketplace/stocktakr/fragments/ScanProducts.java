@@ -107,7 +107,7 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 		String search = searchBarcode.trim();
 		
 		if (!search.equals("")) {
-			Product product = Database.findProduct(search);
+			docketplace.stocktakr.data.Product product = Database.findProduct(search);
 
 			if (product == null) {
 				productInfo.setVisibility(View.GONE);

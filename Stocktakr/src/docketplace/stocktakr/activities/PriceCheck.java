@@ -71,7 +71,7 @@ public class PriceCheck extends SherlockActivity implements OnEditorActionListen
 		String search = searchBarcode.trim();
 		
 		if (!search.equals("")) {
-			Product product = Database.findProduct(search);
+			docketplace.stocktakr.data.Product product = Database.findProduct(search);
 			
 			if (product == null) {
 				productInfo.setVisibility(View.GONE);

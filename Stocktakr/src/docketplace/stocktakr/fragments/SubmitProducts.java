@@ -111,7 +111,7 @@ public class SubmitProducts extends SherlockFragment implements OnClickListener,
 	}
 	
 	public void submitComplete() {
-		PerformStocktake.close();
+		//PerformStocktake.close();
 	}
 	
 	public static void updateStockCount() {

@@ -54,13 +54,23 @@
         android:layout_height="wrap_content"
         android:text="@string/test_connection"
         android:layout_margin="16dip"/>
-
-     <Switch
-         android:id="@+id/set_quantity"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="30dip"
-         android:layout_margin="16dip"
-         android:text="@string/set_quantity_after_scan" />
 
+     <TextView
+        android:id="@+id/setquantity_label"
+        android:layout_margin="8dip"
+        android:layout_marginTop="16dip"
+        android:layout_marginBottom="0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/set_quantity_after_scan"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+     		  <ToggleButton
+        android:id="@+id/set_quantity"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:layout_margin="16dip"     
+        android:layout_width="wrap_content"   
+        android:textOn="@string/toggle_turn_on"
+        android:textOff="@string/toggle_turn_off" />          
+     
 </LinearLayout>

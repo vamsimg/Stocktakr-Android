@@ -20,7 +20,7 @@ import android.database.*;
 public class Settings extends SherlockActivity implements OnClickListener, CompoundButton.OnCheckedChangeListener {
 	private EditText storeID;
 	private EditText password;
-	private Switch   setQuantity;
+	private ToggleButton   setQuantity;
 	
 	private Button testConnection;
 	
@@ -39,7 +39,7 @@ public class Settings extends SherlockActivity implements OnClickListener, Compo
         
         storeID     = (EditText)findViewById(R.id.store_id);
         password    = (EditText)findViewById(R.id.password);
-        setQuantity = (Switch)findViewById(R.id.set_quantity);
+        setQuantity = (ToggleButton)findViewById(R.id.set_quantity);
         
         handler = new TransferHandler(this, "Testing connection", "Login Success", "Login Error");
         
@@ -99,11 +99,22 @@ public class Settings extends SherlockActivity implements OnClickListener, Compo
 		if (v == testConnection) {
 			Log.d("TESTER", "starting");
 			
-			tester = new TestConnection(handler, storeID.getText().toString(), password.getText().toString());
+			String store_ID = storeID.getText().toString();
 			
-			tester.start();
+			String pwd = password.getText().toString();
 			
-			Log.d("TESTER", "started");
+			if(store_ID.length() != 0 && pwd.length()!= 0)
+			{
+				tester = new TestConnection(handler, store_ID,pwd);				
+				tester.start();
+				Log.d("TESTER", "started");
+			}
+			else
+			{
+				Toast.makeText(this, "Enter a StoreID and Password", Toast.LENGTH_SHORT).show();
+			}
+			
+
 		}
 	}
 

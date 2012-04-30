@@ -30,6 +30,8 @@
 	<string name="price_label">"Price: "</string>
 	<string name="price_error">(error)</string>
 	<string name="set_quantity_after_scan">Set quantity after scan</string>
+	<string name="toggle_turn_on">On</string>
+	<string name="toggle_turn_off">Off</string>
 	
 </resources>
 
