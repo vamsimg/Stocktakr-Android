@@ -49,7 +49,7 @@ public class StockAdapter extends ArrayAdapter<StockRecord> {
             }
 
             if (quantity != null) {
-                quantity.setText(String.valueOf(record.quantity));
+                quantity.setText(String.format("%1$,.2f", record.quantity));
             }
         }
 

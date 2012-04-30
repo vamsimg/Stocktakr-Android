@@ -2,29 +2,31 @@ package docketplace.stocktakr.data;
 
 import java.util.ArrayList;
 
+import docketplace.stocktakr.R;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.view.View;
+import android.util.Log;
 
 public class Database {
     public static ArrayList<StockRecord> stock;
 
     public static SQLiteDatabase db;
 
-    //public static StockAdapter stockAdapter;
-
     private static DatabaseHelper helper;
+    
+    private static Context context;
 
     public static void open(Context context) {
+    	Database.context = context;
+    	
         helper = new DatabaseHelper(context);
 
         db = helper.getWritableDatabase();
 
         stock = new ArrayList<StockRecord>();
-
-        //StockAdapter stockAdapter = new StockAdapter(context, );
     }
 
     public static void close() {
@@ -32,30 +34,34 @@ public class Database {
     }
     
     public static AppSettings getSettings() {
-    	Cursor results = db.query("settings", new String[] {"store_id", "password"}, null, null, null, null, null);
+    	Cursor results = db.query("settings", new String[] {"store_id", "password", "set_quantity"}, null, null, null, null, null);
     	
     	AppSettings settings = new AppSettings();
     	
     	if (results.getCount() > 0) {
     		results.moveToFirst();
     		
-    		settings.storeID  = results.getString(0);
-    		settings.password = results.getString(1);
+    		Log.d("LOAD SETTINGS", "Set quantity after scan: " + results.getString(2));
+    		
+    		settings.storeID     = results.getString(0);
+    		settings.password    = results.getString(1);
+    		settings.setQuantity = (results.getInt(2) != 0);
     	}
     	
     	return settings;
     }
     
-    public static void saveSettings(String storeID, String password) {
+    public static void saveSettings(String storeID, String password, boolean setQuantity) {
     	ContentValues values = new ContentValues();
     	
     	values.put("store_id", storeID);
     	values.put("password", password);
+    	values.put("set_quantity", setQuantity);
     	
     	Database.db.update("settings", values, null, null);
     }
     
-    public Product findProduct(String barcode) {
+    public static Product findProduct(String barcode) {
 		Product product = null;
 		
 		String search = barcode.trim();
@@ -71,7 +77,14 @@ public class Database {
 				product.code        = results.getString(0);
 				product.barcode     = results.getString(1);
 				product.description = results.getString(2);
-				product.price       = results.getString(3);
+
+				try {
+					Float price = Float.parseFloat(results.getString(3));
+					
+					product.price = String.format("%1$,.2f", price);
+				} catch (NumberFormatException nfe) {
+					product.price = context.getString(R.string.price_error);
+				}
 			}
 
 			results.close();

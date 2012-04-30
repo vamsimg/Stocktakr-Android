@@ -50,9 +50,9 @@ public class PerformStocktake extends SherlockFragmentActivity {
 
         mTabsAdapter = new TabsAdapter(this, actionBar, mViewPager);
 
-        mTabsAdapter.addTab("Scan", ScanProducts.class);
-        mTabsAdapter.addTab("Recorded", RecordedProducts.class);
-        mTabsAdapter.addTab("Submit", SubmitProducts.class);
+        mTabsAdapter.addTab(getString(R.string.scan), ScanProducts.class);
+        mTabsAdapter.addTab(getString(R.string.recorded), RecordedProducts.class);
+        mTabsAdapter.addTab(getString(R.string.submit), SubmitProducts.class);
     }
 
     @Override
@@ -75,7 +75,13 @@ public class PerformStocktake extends SherlockFragmentActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
+    
+    public static void close() {
+        if (instance != null) {
+            instance.finish();
+        }
+    }
+    
     public static void updateStockCount(int count) {
         if ((instance != null) && (instance.countMenu != null)) {
             //instance.countMenu.setTitle(String.valueOf(count));

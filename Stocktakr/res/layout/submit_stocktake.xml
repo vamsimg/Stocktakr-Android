@@ -40,7 +40,13 @@
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </LinearLayout>
-
+
+    <Button
+        android:id="@+id/submit_all_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dip"
+        android:text="Submit All Products" />
     <Button
         android:id="@+id/submit_button"
         android:layout_width="fill_parent"

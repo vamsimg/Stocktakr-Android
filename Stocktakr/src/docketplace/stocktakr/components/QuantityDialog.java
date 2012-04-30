@@ -33,26 +33,25 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
         
         quantityInput.setSingleLine(true);
         quantityInput.setSelectAllOnFocus(true);
-        quantityInput.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_NORMAL);
-        
-        
+        quantityInput.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         
         quantityDialog = new AlertDialog.Builder(context)
 							.setTitle(R.string.change_quantity)
 							.setView(quantityInput)
-							.setPositiveButton("Change", this)
-							.setNegativeButton("Cancel", this)
+							.setPositiveButton(R.string.change, this)
+							.setNegativeButton(R.string.cancel, this)
 							.create();
         
         input = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
 	}
 	
-	public void show(String code, int currentQuantity) {
+	public void show(String code, String description, float currentQuantity) {
 		quantityInput.setText(String.valueOf(currentQuantity));
 		
 		quantityInput.selectAll();
 		
-		quantityDialog.setMessage("Quantity for " + currentQuantity);
+		quantityDialog.setTitle(context.getString(R.string.quantity_for) + code);
+		quantityDialog.setMessage(description);
 		
 		PerformStocktake.instance.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 		
@@ -61,13 +60,15 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
 
 	public void onClick(DialogInterface dialog, int button) {
 		if (dialog == quantityDialog) {
-			input.hideSoftInputFromWindow(PerformStocktake.instance.getCurrentFocus().getWindowToken(), 0);
+			if (PerformStocktake.instance.getCurrentFocus() != null) {
+				input.hideSoftInputFromWindow(PerformStocktake.instance.getCurrentFocus().getWindowToken(), 0);
+			}
 			
 			if (button == DialogInterface.BUTTON_POSITIVE) {
-				int quantity;
+				float quantity;
 				
 				try {
-					quantity = Integer.parseInt(quantityInput.getText().toString());
+					quantity = Float.parseFloat(quantityInput.getText().toString());
 					
 					if (listener != null) {
 						listener.onChangeQuantity(quantity);

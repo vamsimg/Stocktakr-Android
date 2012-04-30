@@ -6,6 +6,7 @@ import docketplace.stocktakr.components.*;
 
 import com.actionbarsherlock.app.*;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.*;
@@ -27,6 +28,8 @@ public class RecordedProducts extends SherlockFragment implements OnItemClickLis
 	private int selectedProduct;
 	
 	private AlertDialog removeDialog; 
+	
+	private Activity activity;
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,22 +39,24 @@ public class RecordedProducts extends SherlockFragment implements OnItemClickLis
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     	View layout = inflater.inflate(R.layout.recorded_stocktake, container, false);
-
+    	
+    	activity = getActivity();
+    	
         stockList = (ListView)layout.findViewById(R.id.stock_records);
 
-        listAdapter = new StockAdapter(getActivity(), Database.stock);
+        listAdapter = new StockAdapter(activity, Database.stock);
         
         stockList.setAdapter(listAdapter);
 
         stockList.setOnItemClickListener(this);
         stockList.setOnItemLongClickListener(this);
         
-        quantityDialog = new QuantityDialog(getActivity(), this);
+        quantityDialog = new QuantityDialog(activity, this);
         
-        removeDialog = new AlertDialog.Builder(getActivity())
-        				   .setPositiveButton("Remove", this)
-        				   .setNegativeButton("Cancel", this)
-        				   .setMessage("Are you sure you want to remove this product?")
+        removeDialog = new AlertDialog.Builder(activity)
+        				   .setPositiveButton(R.string.remove, this)
+        				   .setNegativeButton(R.string.cancel, this)
+        				   .setMessage(R.string.remove_confirmation)
         				   .setCancelable(true)
         				   .create();
 
@@ -61,7 +66,7 @@ public class RecordedProducts extends SherlockFragment implements OnItemClickLis
     }
     
 	private void setQuantity() {
-		quantityDialog.show(currentProduct.barcode, currentProduct.quantity);
+		quantityDialog.show(currentProduct.barcode, currentProduct.description, currentProduct.quantity);
 	}
 
 	public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -92,7 +97,7 @@ public class RecordedProducts extends SherlockFragment implements OnItemClickLis
 		}
 	}
 
-	public void onChangeQuantity(int newQuantity) {
+	public void onChangeQuantity(float newQuantity) {
 		currentProduct.setQuantity(newQuantity);
 		
 		RecordedProducts.refreshList();

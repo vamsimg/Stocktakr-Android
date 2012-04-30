@@ -4,7 +4,7 @@ import java.text.*;
 import java.util.*;
 
 public class StockRecord {
-	private static final SimpleDateFormat formatter = new SimpleDateFormat("yyy-MM-dd hh:mm:ss");
+	private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	
 	private static String currentTimestamp() {
 		 return formatter.format(new Date());
@@ -13,7 +13,7 @@ public class StockRecord {
 	public String code;
 	public String barcode;
 	public String description;
-	public int    quantity;
+	public float  quantity;
 	public String timestamp;
 
 	public StockRecord(String code, String barcode, String description) {
@@ -25,7 +25,7 @@ public class StockRecord {
 		this.timestamp = currentTimestamp();
 	}
 
-	public int increment() {
+	public float increment() {
 		quantity++;
 		
 		this.timestamp = currentTimestamp();
@@ -33,7 +33,7 @@ public class StockRecord {
 		return quantity;
 	}
 
-	public void setQuantity(int quantity) {
+	public void setQuantity(float quantity) {
 		this.quantity = quantity;
 		
 		this.timestamp = currentTimestamp();

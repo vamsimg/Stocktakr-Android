@@ -41,11 +41,17 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 		
 	private QuantityDialog quantityDialog;
 	
+	private boolean setQuantityAfterScan;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         stock = Database.stock;
+        
+        Log.d("SCAN", "Set quantity after scan: " + Database.getSettings().setQuantity);
+        
+        setQuantityAfterScan = Database.getSettings().setQuantity;
     }
 
     @Override
@@ -99,42 +105,31 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 
 	private void searchProducts(String searchBarcode) {
 		String search = searchBarcode.trim();
-
-		String productCode;
-		String productBarcode;
-		String productDescription;
-		String productSalePrice;
 		
 		if (!search.equals("")) {
-			Cursor results = Database.db.query("products", new String[] {"code", "barcode", "description", "sale_price"}, "(barcode = ?)", new String[] {search}, null, null, null);
+			Product product = Database.findProduct(search);
 
-			if (results.getCount() == 0) {
+			if (product == null) {
 				productInfo.setVisibility(View.GONE);
 				productNotFound.setVisibility(View.VISIBLE);
 				
 				notFoundBarcode.setText(getString(R.string.product_not_found_message) + search);
 			} else {
-				results.moveToFirst();
+				description.setText(product.description);				
+				scanned.setText(getString(R.string.barcode_label) + product.barcode);
+				salePrice.setText(getString(R.string.price_label) + product.price);
+				
+				float count = recordStock(search, product.code, product.barcode, product.description);
 
-				productCode        = results.getString(0);
-				productBarcode     = results.getString(1);
-				productDescription = results.getString(2);
-				productSalePrice   = results.getString(3);
-				
-				description.setText(productDescription);
-				
-				scanned.setText("Barcode: " + productBarcode);
-				salePrice.setText("Price: " + productSalePrice);
-				
-				int count = recordStock(search, productCode, productBarcode, productDescription);
-
-				updateQuantity.setText(String.valueOf(count));
+				updateQuantity.setText(String.format("%1$,.2f", count));
 
 				productInfo.setVisibility(View.VISIBLE);
 				productNotFound.setVisibility(View.GONE);
+				
+				if (setQuantityAfterScan) {
+					quantityDialog.show(currentProduct.barcode, currentProduct.description, currentProduct.quantity);
+				}
 			}
-
-			results.close();
 		} else {
 			productInfo.setVisibility(View.GONE);
 			productNotFound.setVisibility(View.GONE);
@@ -142,27 +137,27 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 	}
 	
 	private void setQuantity() {
-		quantityDialog.show(currentProduct.barcode, currentProduct.quantity);
+		quantityDialog.show(currentProduct.barcode, currentProduct.description, currentProduct.quantity);
 	}
 	
 	private void changeQuantity(int delta) {
-		int count = currentProduct.quantity;
+		float count = currentProduct.quantity;
 		
-		int newCount = count + delta;
+		float newCount = count + delta;
 		
 		if (newCount >= 0) {
 			currentProduct.setQuantity(newCount);
 			
-			updateQuantity.setText(" " + String.valueOf(newCount) + " ");
+			updateQuantity.setText(String.format("%1$,.2f", newCount));
 			
 			RecordedProducts.refreshList();
 		}
 	}
 
-	private int recordStock(String code, String productCode, String productBarcode, String productDescription) {
+	private float recordStock(String code, String productCode, String productBarcode, String productDescription) {
 		boolean updated = false;
 
-		int count = 1;
+		float count = 1;
 		
 		for (int r = 0; r < stock.size(); r++) {
 			if (stock.get(r).barcode.equalsIgnoreCase(code)) {
@@ -201,7 +196,7 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 				
 				PerformStocktake.hideKeyboard();
 				
-				barcode.requestFocus();
+				//barcode.requestFocus();
 				
 				return true;
 			}
@@ -210,10 +205,10 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 		return false;
 	}
 	
-	public void onChangeQuantity(int newQuantity) {
+	public void onChangeQuantity(float newQuantity) {
 		currentProduct.setQuantity(newQuantity);
 		
-		updateQuantity.setText(" " + String.valueOf(newQuantity) + " ");
+		updateQuantity.setText(String.format("%1$,.2f", newQuantity));
 		
 		RecordedProducts.refreshList();
 	}
@@ -222,5 +217,11 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 		Log.d("SCAN", "downloaded product: " + productBarcode);
 		
 		searchProducts(productBarcode);
+		
+		barcode.setText("");
+		
+		PerformStocktake.hideKeyboard();
+		
+		barcode.requestFocus();
 	}
 }

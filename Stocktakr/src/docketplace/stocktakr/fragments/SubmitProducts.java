@@ -1,21 +1,22 @@
 package docketplace.stocktakr.fragments;
 
 import docketplace.stocktakr.*;
+import docketplace.stocktakr.activities.PerformStocktake;
+import docketplace.stocktakr.components.SubmissionListener;
 import docketplace.stocktakr.data.*;
 import docketplace.stocktakr.webservice.*;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
+import android.database.Cursor;
 import android.os.*;
-import android.app.*;
-import android.content.*;
 import android.util.Log;
 import android.view.*;
 import android.view.View.*;
 import android.widget.*;
 
 
-public class SubmitProducts extends SherlockFragment implements OnClickListener {
+public class SubmitProducts extends SherlockFragment implements OnClickListener, SubmissionListener {
 	private static SubmitProducts instance;
 	
 	private EditText name;
@@ -25,15 +26,17 @@ public class SubmitProducts extends SherlockFragment implements OnClickListener 
 	private SubmitStockRecords submitStock;
 	private TransferHandler    handler;
 	
+	private Button   submitAll;
+	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        instance = this;
     }
 	
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    	instance = this;
+    	
     	View layout = inflater.inflate(R.layout.submit_stocktake, container, false);
     	
     	name   = (EditText)layout.findViewById(R.id.person_name);
@@ -43,29 +46,20 @@ public class SubmitProducts extends SherlockFragment implements OnClickListener 
         
         if (Database.stock.size() > 0) {
         	productCounter.setText(instance.getString(R.string.products) + Database.stock.size());
+        } else {
+        	productCounter.setText("");
         }
         
         submit.setOnClickListener(this);
+        
+        submitAll = (Button)layout.findViewById(R.id.submit_all_button);
+        
+        submitAll.setOnClickListener(this);
         
         handler = new TransferHandler(this.getActivity(), "Submitting stock records", "Records submitted", "Submission Error");
         
     	return layout;
     }
-    
-    private void showAlert(String title, String message) {
-		final AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
-		alertDialog.setTitle(title);
-		alertDialog.setMessage(message);
-
-		alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-					alertDialog.cancel();
-					getActivity().finish();
-				}
-		});
-		
-		alertDialog.show();
-	}
 
 	public void onClick(View v) {
 		String personName;
@@ -78,14 +72,46 @@ public class SubmitProducts extends SherlockFragment implements OnClickListener 
 			} else {
 				Log.d("SUBMIT", "starting");
 				
-				submitStock = new SubmitStockRecords(handler, name.getText().toString(), getActivity().getBaseContext());
+				submitStock = new SubmitStockRecords(handler, name.getText().toString(), this, getActivity().getBaseContext());
 				
 				submitStock.start();
 				
 				Log.d("SUBMIT", "started");
 			
 			}
+		} else if (v == submitAll) {
+			Database.stock.clear();
+			
+			Log.d("SUBMIT ALL", "loading all products");
+			
+			Cursor results = Database.db.query("products", new String[] {"code", "barcode", "description", "sale_price"}, null, null, null, null, null);
+
+			if (results.getCount() > 0) {
+				results.moveToFirst();
+				
+				Log.d("SUBMIT ALL", "loading: " + results.getCount());
+				
+				do {
+					Database.stock.add(new StockRecord(results.getString(0), results.getString(1), results.getString(2)));
+				} while (results.moveToNext());
+				
+				Log.d("SUBMIT ALL", "starting");
+				
+				submitStock = new SubmitStockRecords(handler, "submit all", this, getActivity().getBaseContext());
+				
+				submitStock.start();
+				
+				Log.d("SUBMIT ALL", "started");
+			} else {
+				Log.d("SUBMIT ALL", "no products downloaded");
+			}
+			
+			results.close();
 		}
+	}
+	
+	public void submitComplete() {
+		PerformStocktake.close();
 	}
 	
 	public static void updateStockCount() {

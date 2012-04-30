@@ -24,17 +24,20 @@ import android.content.Context;
 import android.util.Base64;
 import android.util.Log;
 
+import docketplace.stocktakr.components.SubmissionListener;
 import docketplace.stocktakr.data.*;
 
 
 public class SubmitStockRecords extends WebServiceAction {
 	private String personName;
 	private Context currentContext;
+	private SubmissionListener listener;
 	
-	public SubmitStockRecords(TransferHandler handler, String personName, Context now) {	
+	public SubmitStockRecords(TransferHandler handler, String personName, SubmissionListener listener, Context now) {	
 		super(handler);
 		currentContext = now;	
 		this.personName = personName;
+		this.listener = listener;
 	}
 	
 	private JSONObject buildStockRecord(StockRecord record) throws JSONException {
@@ -153,9 +156,13 @@ public class SubmitStockRecords extends WebServiceAction {
 			if (responseCode == HttpURLConnection.HTTP_OK) {
 				Log.d("SUBMIT", "success");
 				
-				sendMessage(TransferHandler.COMPLETE);
-				
 				Database.stock.clear();
+				
+				if (listener != null) {
+					listener.submitComplete();
+				}
+				
+				sendMessage(TransferHandler.COMPLETE);
 			}
 		} catch (JSONException e) {
 			Log.d("SUBMIT", "Exception: " + e.getMessage());

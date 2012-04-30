@@ -17,14 +17,17 @@ import android.content.*;
 import android.database.*;
 
 
-public class Settings extends SherlockActivity implements OnClickListener {
+public class Settings extends SherlockActivity implements OnClickListener, CompoundButton.OnCheckedChangeListener {
 	private EditText storeID;
 	private EditText password;
+	private Switch   setQuantity;
 	
 	private Button testConnection;
 	
 	private TestConnection  tester;
 	private TransferHandler handler;
+	
+	private boolean setQuantityChecked;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,10 @@ public class Settings extends SherlockActivity implements OnClickListener {
 
         setContentView(R.layout.settings);
         
+        storeID     = (EditText)findViewById(R.id.store_id);
+        password    = (EditText)findViewById(R.id.password);
+        setQuantity = (Switch)findViewById(R.id.set_quantity);
+        
         handler = new TransferHandler(this, "Testing connection", "Login Success", "Login Error");
         
         testConnection = (Button)findViewById(R.id.test_connection);
@@ -42,6 +49,8 @@ public class Settings extends SherlockActivity implements OnClickListener {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         
         loadSettings();
+        
+        setQuantity.setOnCheckedChangeListener(this);
         
         testConnection.setOnClickListener(this);
     }
@@ -71,19 +80,19 @@ public class Settings extends SherlockActivity implements OnClickListener {
     }
     
     private void loadSettings() {
-    	storeID  = (EditText)findViewById(R.id.store_id);
-        password = (EditText)findViewById(R.id.password);
-        
         AppSettings settings = Database.getSettings();
         
         if (settings != null) {
         	storeID.setText(settings.storeID);
         	password.setText(settings.password);
+        	setQuantity.setChecked(settings.setQuantity);
+        	
+        	setQuantityChecked = settings.setQuantity;
         }
     }
     
     private void saveSettings() {
-    	Database.saveSettings(storeID.getText().toString(), password.getText().toString());
+    	Database.saveSettings(storeID.getText().toString(), password.getText().toString(), setQuantityChecked);
     }
 
 	public void onClick(View v) {
@@ -95,6 +104,12 @@ public class Settings extends SherlockActivity implements OnClickListener {
 			tester.start();
 			
 			Log.d("TESTER", "started");
+		}
+	}
+
+	public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+		if (button == setQuantity) {
+			setQuantityChecked = isChecked;
 		}
 	}
 }

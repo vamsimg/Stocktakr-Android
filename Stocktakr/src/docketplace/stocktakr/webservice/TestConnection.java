@@ -2,17 +2,10 @@ package docketplace.stocktakr.webservice;
 
 import org.json.*;
 
-import docketplace.stocktakr.data.*;
-
-import android.os.Message;
 import android.util.Log;
 
 
 public class TestConnection extends WebServiceAction {
-	
-	//private String storeID;
-	//private String password;
-	
 	public TestConnection(TransferHandler handler, String storeID, String password) {
 		super(handler);
 		

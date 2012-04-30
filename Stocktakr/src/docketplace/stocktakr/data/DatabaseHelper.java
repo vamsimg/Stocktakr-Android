@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 	private static final String DATABASE_NAME    = "stocktakr.db";
-	private static final int    DATABASE_VERSION = 4;
+	private static final int    DATABASE_VERSION = 5;
 	
 	private Resources resources;
 	
@@ -39,11 +39,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		db.execSQL("DROP TABLE products;");
-		
+		db.execSQL("DROP TABLE settings;");
 
 		// Create Products table
-		db.execSQL(resources.getString(R.string.create_products));				
+		db.execSQL(resources.getString(R.string.create_settings));	
+		
+		// Insert default settings
+		db.execSQL(resources.getString(R.string.default_settings));
 	}
 
 }

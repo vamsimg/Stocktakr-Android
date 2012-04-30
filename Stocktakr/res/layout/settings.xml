@@ -54,4 +54,13 @@
         android:layout_height="wrap_content"
         android:text="@string/test_connection"
         android:layout_margin="16dip"/>
+
+     <Switch
+         android:id="@+id/set_quantity"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="30dip"
+         android:layout_margin="16dip"
+         android:text="@string/set_quantity_after_scan" />
+
 </LinearLayout>

@@ -4,42 +4,79 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:padding="16dip">
-
+    
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <EditText
             android:id="@+id/price_check_barcode"
+            android:singleLine="true"
             android:hint="Product Barcode"
             android:selectAllOnFocus="true"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:imeOptions="actionSearch"/>
+            android:imeOptions="actionSearch"
+            android:layout_margin="4dip"/>
     </LinearLayout>
 
-    
-	<TextView
-            android:id="@+id/price_check_description_label"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_marginTop="8dip"
-        	android:layout_marginBottom="8dip"/>
+	<LinearLayout
+	    android:id="@+id/price_check_product_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
 	
-	<TextView
-            android:id="@+id/price_check_scanned_barcode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_marginBottom="6dip"/>
+	    <TextView
+	        android:id="@+id/price_check_description_label"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:layout_margin="8dip"
+	        android:text="(description)"/>
+	    
+	    <TextView
+	        android:id="@+id/price_check_scanned_barcode"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:layout_margin="8dip"
+	        android:text="(barcode)"/>
+	
+	    <TextView
+	        android:id="@+id/price_check_sale_price_label"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="8dip"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:text="(price)"/>
+    </LinearLayout>
 
-	<TextView
-            android:id="@+id/price_check_sale_price_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+	<LinearLayout
+	    android:id="@+id/price_check_product_not_found_section"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+	    
 
+	    <TextView
+	        android:id="@+id/price_check_product_not_found"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="8dip"
+	        android:text="@string/product_not_found_message"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	    <Button
+	        android:id="@+id/price_check_download_product_info"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="16dip"
+	        android:text="@string/download_product_info" />
+	    
+	</LinearLayout>
 </LinearLayout>

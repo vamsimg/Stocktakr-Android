@@ -111,7 +111,8 @@
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_margin="16dip"
-	        android:text="@string/download_product_info" />
+	        android:text="@string/download_product_info"
+	        android:visibility="gone"/>
 	    
 	</LinearLayout>
 </LinearLayout>
