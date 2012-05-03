@@ -14,12 +14,14 @@
             android:singleLine="true"
             android:hint="Product Barcode"
             android:selectAllOnFocus="true"
+            android:focusable="true"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:imeOptions="actionSearch"
             android:layout_margin="4dip"/>
+        <requestFocus />
     </LinearLayout>
 	<LinearLayout
 	    android:id="@+id/product_info"
@@ -42,6 +44,7 @@
 	            android:id="@+id/update_quantity"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
+	            android:focusable="false"
 	            android:text=" ? "/>
 	        
 	        <LinearLayout
@@ -55,12 +58,14 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:text="  +  "
+		            android:focusable="false"
 		            android:layout_marginRight="30dip"/>
 	            
 	            <Button
 		            android:id="@+id/quantity_minus"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
+		            android:focusable="false"
 		            android:text="  -  "/>
 	        </LinearLayout>
 	
@@ -105,14 +110,7 @@
 	        android:layout_margin="8dip"
 	        android:text="@string/product_not_found_message"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-	    <Button
-	        android:id="@+id/download_product_info"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_margin="16dip"
-	        android:text="@string/download_product_info"
-	        android:visibility="gone"/>
+	    
 	    
 	</LinearLayout>
 </LinearLayout>
