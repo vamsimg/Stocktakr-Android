@@ -82,11 +82,7 @@ public class PerformStocktake extends SherlockFragmentActivity {
         }
     }
     
-    public static void updateStockCount(int count) {
-        if ((instance != null) && (instance.countMenu != null)) {
-            //instance.countMenu.setTitle(String.valueOf(count));
-        }
-    }
+   
     
     public static void hideKeyboard() {
 		if ((instance != null) && (instance.input != null) && (instance.getCurrentFocus() != null)) {

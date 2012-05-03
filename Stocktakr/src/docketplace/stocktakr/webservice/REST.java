@@ -16,9 +16,11 @@ import android.os.Message;
 import android.util.Log;
 
 public class REST {
-	protected static final String WebServiceURL = "http://testdocketc.web705.discountasp.net/MobileItemHandler/"; 
+	//protected static final String WebServiceURL = "http://testdocketc.web705.discountasp.net/MobileItemHandler/"; 
 	
 	//protected static final String WebServiceURL = "http://posttestserver.com/post.php/";
+	
+	protected static final String WebServiceURL = "http://stocktakr.com/MobileItemHandler/";
 	
 	public TransferHandler handler;
 	
@@ -51,6 +53,7 @@ public class REST {
 	}
 	
 	public JSONObject getFullURL(String request) {
+		Log.d("REST", "url: " + request);
 		URL url;
 		
 		HttpURLConnection conn;
@@ -172,11 +175,11 @@ public class REST {
 		return null;
 	}
 	
-	//WebServiceURL + request + "/" + storeID + "/" + password
-	public int post(String request, String  data) {
-		Log.d("REST POST", "posting to: " + WebServiceURL + request + "/" + storeID + "/" + password);
+	
+	public int post(String request,String params ,String  data) {
+		Log.d("REST POST", "posting to: " + WebServiceURL + request + "/" + storeID + "/" + password + "/" + params);
 		
-		return postFullURL(WebServiceURL + request + "/" + storeID + "/" + password, data);		
+		return postFullURL(WebServiceURL + request + "/" + storeID + "/" + password + "/" + params, data);		
 	}
 	
 	public int postFullURL(String request, String data)

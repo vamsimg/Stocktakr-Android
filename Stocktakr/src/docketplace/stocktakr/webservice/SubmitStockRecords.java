@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URLEncoder;
 import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
@@ -21,6 +22,7 @@ import java.util.zip.ZipOutputStream;
 import org.json.*;
 
 import android.content.Context;
+import android.os.Build;
 import android.util.Base64;
 import android.util.Log;
 
@@ -46,8 +48,7 @@ public class SubmitStockRecords extends WebServiceAction {
 		json.put("product_code", record.code);
 		json.put("product_barcode", record.barcode);
 		json.put("description", record.description);
-		json.put("quantity", record.quantity);
-		json.put("person", personName);
+		json.put("quantity", record.quantity);		
 		json.put("stocktake_datetime", record.timestamp);
 		
 		return json;
@@ -135,21 +136,18 @@ public class SubmitStockRecords extends WebServiceAction {
 	public void run() {
 		
 		Log.d("SUBMIT", "beginning");
-		
-		
-		
-		
+			
 		sendMessage(TransferHandler.START);
-		
-		
+				
 		try {
 		
 			String zippedTransactions = zipData(buildStockList().toString());			
 			
 			
 			Log.d("SUBMIT", "posting");
+			String deviceDetails = URLEncoder.encode((Build.BRAND + "$" + Build.MODEL  + "$" + Build.VERSION.SDK_INT).replaceAll(" ",""));
 			
-			int responseCode = rest.post("ZippedStocktakeTransactions", zippedTransactions);
+			int responseCode = rest.post("ZippedStocktakeTransactions", deviceDetails + "/" + personName, zippedTransactions);
 			
 			Log.d("SUBMIT", "posted");
 			

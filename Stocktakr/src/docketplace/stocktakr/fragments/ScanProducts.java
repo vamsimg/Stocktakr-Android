@@ -18,7 +18,7 @@ import android.widget.TextView.*;
 
 import java.util.*;
 
-public class ScanProducts extends SherlockFragment implements OnClickListener, OnEditorActionListener, QuantityListener, ProductInfoListener {
+public class ScanProducts extends SherlockFragment implements OnClickListener, OnEditorActionListener, QuantityListener {
 	public LinearLayout productInfo;
 	public LinearLayout productNotFound;
 	
@@ -33,7 +33,6 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 	public TextView quantityLabel;
 	public Button   updateQuantity;
 	public Button   quantityPlus, quantityMinus;
-	public Button   downloadProductInfo;
 
 	public ArrayList<StockRecord> stock;
 	
@@ -70,9 +69,8 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
         
         updateQuantity = (Button)layout.findViewById(R.id.update_quantity);
         quantityPlus   = (Button)layout.findViewById(R.id.quantity_plus);
-        quantityMinus  = (Button)layout.findViewById(R.id.quantity_minus);
+        quantityMinus  = (Button)layout.findViewById(R.id.quantity_minus);       
         
-        downloadProductInfo = (Button)layout.findViewById(R.id.download_product_info);
         
         productInfo.setVisibility(View.GONE);
         productNotFound.setVisibility(View.GONE);
@@ -81,7 +79,7 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
         quantityPlus.setOnClickListener(this);
         quantityMinus.setOnClickListener(this);
         
-        downloadProductInfo.setOnClickListener(this);
+     
 
         barcode.setOnEditorActionListener(this);
         
@@ -98,9 +96,7 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 			changeQuantity(1);
 		} else if (v == quantityMinus) {
 			changeQuantity(-1);
-		} else if (v == downloadProductInfo) {
-			
-		}
+		} 
 	}
 
 	private void searchProducts(String searchBarcode) {
@@ -121,14 +117,25 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 				
 				float count = recordStock(search, product.code, product.barcode, product.description);
 
-				updateQuantity.setText(String.format("%1$,.2f", count));
-
+				String displayCount = "";
+				
+				if(Math.ceil(count) == count )
+				{
+					displayCount = String.valueOf(Math.round(count));
+				}
+				else
+				{
+					displayCount = String.format("%1$,.2f", count);
+				}
+				
+				updateQuantity.setText(displayCount);
+						
 				productInfo.setVisibility(View.VISIBLE);
 				productNotFound.setVisibility(View.GONE);
 				
 				if (setQuantityAfterScan) {
 					quantityDialog.show(currentProduct.barcode, currentProduct.description, currentProduct.quantity);
-				}
+				}				
 			}
 		} else {
 			productInfo.setVisibility(View.GONE);
@@ -151,7 +158,7 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 			updateQuantity.setText(String.format("%1$,.2f", newCount));
 			
 			RecordedProducts.refreshList();
-		}
+		}		
 	}
 
 	private float recordStock(String code, String productCode, String productBarcode, String productDescription) {
@@ -165,8 +172,10 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 
 				StockRecord record = stock.remove(r);
 
-				count = record.increment();
-
+				if(!setQuantityAfterScan)
+				{
+					count = record.increment();
+				}	
 				stock.add(0, record);
 				
 				currentProduct = record;
@@ -178,8 +187,7 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 			
 			stock.add(0, currentProduct);
 		}
-
-		//PerformStocktake.updateStockCount(stock.size());
+	
 		SubmitProducts.updateStockCount();
 		
 		RecordedProducts.refreshList();
@@ -196,12 +204,13 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 				
 				PerformStocktake.hideKeyboard();
 				
-				//barcode.requestFocus();
+				
 				
 				return true;
 			}
 		}
-
+		
+		
 		return false;
 	}
 	
@@ -211,17 +220,6 @@ public class ScanProducts extends SherlockFragment implements OnClickListener, O
 		updateQuantity.setText(String.format("%1$,.2f", newQuantity));
 		
 		RecordedProducts.refreshList();
-	}
-
-	public void productDownloaded(String productBarcode) {
-		Log.d("SCAN", "downloaded product: " + productBarcode);
 		
-		searchProducts(productBarcode);
-		
-		barcode.setText("");
-		
-		PerformStocktake.hideKeyboard();
-		
-		barcode.requestFocus();
-	}
+	}	
 }

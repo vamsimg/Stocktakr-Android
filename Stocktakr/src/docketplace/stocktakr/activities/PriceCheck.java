@@ -12,12 +12,13 @@ import android.content.*;
 import android.database.*;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnKeyListener;
 import android.view.inputmethod.*;
 import android.widget.*;
 import android.widget.TextView.*;
 
 
-public class PriceCheck extends SherlockActivity implements OnEditorActionListener {
+public class PriceCheck extends SherlockActivity implements  OnEditorActionListener {
 	public LinearLayout productInfo;
 	public LinearLayout productNotFound;
 	
@@ -50,6 +51,7 @@ public class PriceCheck extends SherlockActivity implements OnEditorActionListen
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        	
         barcode.setOnEditorActionListener(this);
     }
 
@@ -92,7 +94,11 @@ public class PriceCheck extends SherlockActivity implements OnEditorActionListen
 		}
 	}
 
+    
 	public boolean onEditorAction(TextView view, int action, KeyEvent event) {
+		
+		int test = event.getKeyCode();
+		
 		if (view == barcode) {
 			if ((action == EditorInfo.IME_ACTION_SEARCH) || ((event != null) && (event.getAction() == KeyEvent.ACTION_DOWN) && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER))) {
 				searchProducts(barcode.getText().toString());
@@ -101,7 +107,7 @@ public class PriceCheck extends SherlockActivity implements OnEditorActionListen
 				
 				PerformStocktake.hideKeyboard();
 				
-				//barcode.requestFocus();
+				barcode.requestFocus();
 				
 				return true;
 			}

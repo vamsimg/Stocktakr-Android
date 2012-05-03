@@ -77,7 +77,7 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
 					// not sure what to do here just yet
 				}
 			} else if (button == DialogInterface.BUTTON_NEGATIVE) {
-				quantityDialog.dismiss();
+				quantityDialog.dismiss();				
 			}
 		}
 	}

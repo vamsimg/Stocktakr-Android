@@ -9,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URLEncoder;
 import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
@@ -20,6 +21,7 @@ import docketplace.stocktakr.data.*;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteStatement;
+import android.os.Build;
 import android.os.Message;
 import android.util.Base64;
 import android.util.Log;
@@ -70,16 +72,16 @@ public class DownloadProducts extends WebServiceAction {
 			
 			if (pageSize > 0) {
 				//Log.d("DOWNLOAD", "Begin product download");
+				String deviceDetails = URLEncoder.encode((Build.BRAND + "$" + Build.MODEL  + "$" + Build.VERSION.SDK_INT).replaceAll(" ",""));
+				json = rest.get("ZippedItems", deviceDetails + "/" + start + "/" + pageSize);
 				
-				json = rest.get("ZippedItems", start + "/" + pageSize);
-				
-				//Log.d("DOWNLOAD", "End product download");
+				Log.d("DOWNLOAD", "End product download");
 			} else {
-				//Log.d("DOWNLOAD", "No products");
+				Log.d("DOWNLOAD", "No products");
 			}
 			
 			if (json != null) {
-				//Log.d("DOWNLOAD", "not-null product JSON");
+				Log.d("DOWNLOAD", "not-null product JSON");
 				
 				String data = json.getString("zippedText");
 				
@@ -136,13 +138,13 @@ public class DownloadProducts extends WebServiceAction {
 					Database.db.endTransaction();
 					
 				}					
-				//Log.d("DOWNLOAD", "stored products: "  + count);				
+				Log.d("DOWNLOAD", "stored products: "  + itemCount);				
 				
 			} else {
-				//Log.d("DOWNLOAD", "null product JSON");
+				Log.d("DOWNLOAD", "null product JSON");
 			}
 		} catch (JSONException je) {
-			//Log.d("DOWNLOAD", "JSON exception: " + je.getMessage());
+			Log.d("DOWNLOAD", "JSON exception: " + je.getMessage());
 		}
 		
 		return success;
