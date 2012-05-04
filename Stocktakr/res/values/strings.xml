@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Stocktakr</string>
+    <string name="app_name">StockTakr</string>
     <string name="download_products">Download Products</string>
     <string name="perform_stocktake">Perform Stocktake</string>
     <string name="submit_stocktake">Submit Stocktake</string>
     <string name="price_check">Price Check</string>
-    <string name="stocktakr_settings">Stocktakr Settings</string>
+    <string name="stocktakr_settings">Settings</string>
     <string name="quantity">Quantity: </string>
     <string name="change_quantity">Change Quantity</string>
     <string name="quantity_for">"Quantity for "</string>
@@ -32,6 +32,7 @@
 	<string name="set_quantity_after_scan">Set quantity after scan</string>
 	<string name="toggle_turn_on">On</string>
 	<string name="toggle_turn_off">Off</string>
+	<string name="None"> </string>
 	
 </resources>
 

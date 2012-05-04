@@ -784,8 +784,11 @@ containing a value of this type.
         public static final int abs__tab_selected_pressed_holo=0x7f020053;
         public static final int abs__tab_unselected_pressed_holo=0x7f020054;
         public static final int ic_launcher=0x7f020055;
+        public static final int stocktakr_icon=0x7f020056;
+        public static final int stocktakr_logo=0x7f020057;
     }
     public static final class id {
+        public static final int Logo_imageView=0x7f040047;
         public static final int abs__action_bar=0x7f040022;
         public static final int abs__action_bar_container=0x7f040021;
         public static final int abs__action_bar_subtitle=0x7f040011;
@@ -816,53 +819,52 @@ containing a value of this type.
         public static final int abs__titleDivider=0x7f04001c;
         public static final int abs__up=0x7f04000b;
         public static final int disableHome=0x7f040009;
-        public static final int download_product_info=0x7f04003c;
         public static final int download_products_button=0x7f04004a;
         public static final int homeAsUp=0x7f040006;
         public static final int listMode=0x7f040002;
         public static final int normal=0x7f040001;
         public static final int pager=0x7f040027;
-        public static final int password=0x7f040040;
-        public static final int password_label=0x7f04003f;
+        public static final int password=0x7f04003e;
+        public static final int password_label=0x7f04003d;
         public static final int perform_stocktake_button=0x7f040049;
         public static final int person_name=0x7f04004b;
         public static final int price_check_barcode=0x7f040028;
         public static final int price_check_button=0x7f040048;
         public static final int price_check_description_label=0x7f04002a;
-        public static final int price_check_download_product_info=0x7f04002f;
         public static final int price_check_product_info=0x7f040029;
         public static final int price_check_product_not_found=0x7f04002e;
         public static final int price_check_product_not_found_section=0x7f04002d;
         public static final int price_check_sale_price_label=0x7f04002c;
         public static final int price_check_scanned_barcode=0x7f04002b;
         public static final int product_counter=0x7f04004c;
-        public static final int product_info=0x7f040032;
-        public static final int product_not_found=0x7f04003a;
-        public static final int quantity_label=0x7f040033;
-        public static final int quantity_minus=0x7f040036;
-        public static final int quantity_plus=0x7f040035;
-        public static final int set_quantity=0x7f040042;
+        public static final int product_info=0x7f040031;
+        public static final int product_not_found=0x7f040039;
+        public static final int quantity_label=0x7f040032;
+        public static final int quantity_minus=0x7f040035;
+        public static final int quantity_plus=0x7f040034;
+        public static final int set_quantity=0x7f040041;
+        public static final int setquantity_label=0x7f040040;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
-        public static final int stock_barcode=0x7f040045;
-        public static final int stock_description=0x7f040047;
-        public static final int stock_item=0x7f040044;
-        public static final int stock_quantity=0x7f040046;
-        public static final int stock_records=0x7f040030;
-        public static final int stocktake_barcode=0x7f040031;
-        public static final int stocktake_description_label=0x7f040037;
-        public static final int stocktake_product_not_found=0x7f04003b;
-        public static final int stocktake_sale_price_label=0x7f040039;
-        public static final int stocktake_scanned_barcode=0x7f040038;
-        public static final int store_id=0x7f04003e;
-        public static final int store_id_label=0x7f04003d;
+        public static final int stock_barcode=0x7f040044;
+        public static final int stock_description=0x7f040046;
+        public static final int stock_item=0x7f040043;
+        public static final int stock_quantity=0x7f040045;
+        public static final int stock_records=0x7f04002f;
+        public static final int stocktake_barcode=0x7f040030;
+        public static final int stocktake_description_label=0x7f040036;
+        public static final int stocktake_product_not_found=0x7f04003a;
+        public static final int stocktake_sale_price_label=0x7f040038;
+        public static final int stocktake_scanned_barcode=0x7f040037;
+        public static final int store_id=0x7f04003c;
+        public static final int store_id_label=0x7f04003b;
         public static final int submit_all_button=0x7f04004d;
         public static final int submit_button=0x7f04004e;
         public static final int tabMode=0x7f040003;
-        public static final int test_connection=0x7f040041;
-        public static final int textView1=0x7f040043;
-        public static final int update_quantity=0x7f040034;
+        public static final int test_connection=0x7f04003f;
+        public static final int textView1=0x7f040042;
+        public static final int update_quantity=0x7f040033;
         public static final int useLogo=0x7f040004;
         public static final int wrap_content=0x7f040000;
     }
@@ -904,6 +906,7 @@ containing a value of this type.
         public static final int submit_stocktake=0x7f03001f;
     }
     public static final class string {
+        public static final int None=0x7f09002e;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abs__action_bar_home_description=0x7f090000;
@@ -966,6 +969,8 @@ containing a value of this type.
         public static final int submit=0x7f09001b;
         public static final int submit_stocktake=0x7f090012;
         public static final int test_connection=0x7f090020;
+        public static final int toggle_turn_off=0x7f09002d;
+        public static final int toggle_turn_on=0x7f09002c;
         public static final int update=0x7f09001a;
         public static final int your_name=0x7f09001f;
     }
