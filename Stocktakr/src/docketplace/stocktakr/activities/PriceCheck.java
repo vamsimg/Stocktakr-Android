@@ -7,12 +7,12 @@ import com.actionbarsherlock.app.*;
 import com.actionbarsherlock.view.MenuItem;
 
 import android.os.*;
-import android.app.*;
+
 import android.content.*;
-import android.database.*;
+
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnKeyListener;
+
 import android.view.inputmethod.*;
 import android.widget.*;
 import android.widget.TextView.*;
@@ -87,6 +87,13 @@ public class PriceCheck extends SherlockActivity implements  OnEditorActionListe
 
 				productInfo.setVisibility(View.VISIBLE);
 				productNotFound.setVisibility(View.GONE);
+				
+				// Get instance of Vibrator from current Context
+				Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+				 
+				// Vibrate for 100 milliseconds
+				v.vibrate(100);
+
 			}
 		} else {
 			productInfo.setVisibility(View.GONE);
@@ -95,9 +102,8 @@ public class PriceCheck extends SherlockActivity implements  OnEditorActionListe
 	}
 
     
-	public boolean onEditorAction(TextView view, int action, KeyEvent event) {
-		
-		int test = event.getKeyCode();
+	public boolean onEditorAction(TextView view, int action, KeyEvent event) 
+	{
 		
 		if (view == barcode) {
 			if ((action == EditorInfo.IME_ACTION_SEARCH) || ((event != null) && (event.getAction() == KeyEvent.ACTION_DOWN) && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER))) {
@@ -105,7 +111,7 @@ public class PriceCheck extends SherlockActivity implements  OnEditorActionListe
 
 				barcode.setText("");
 				
-				PerformStocktake.hideKeyboard();
+				//Stocktakr.hideKeyboard();
 				
 				barcode.requestFocus();
 				

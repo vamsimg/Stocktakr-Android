@@ -20,9 +20,7 @@ import org.json.*;
 import docketplace.stocktakr.data.*;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteStatement;
 import android.os.Build;
-import android.os.Message;
 import android.util.Base64;
 import android.util.Log;
 
@@ -56,11 +54,6 @@ public class DownloadProducts extends WebServiceAction {
 		return count;
 	}
 	
-	private void sendMessage(TransferHandler handler, int type, int arg) {
-		Message message = handler.obtainMessage(type, arg, 0);
-		
-		handler.sendMessage(message);
-	}
 	
 	private boolean getProducts(int start, int pageSize) {
 		JSONObject json;
@@ -89,55 +82,10 @@ public class DownloadProducts extends WebServiceAction {
 				
 				JSONArray items = new JSONArray(unzippedItems);
 				
-				JSONObject item;
-				
 				int itemCount = json.getInt("itemCount");
 				
-				Database.db.beginTransaction();
-				try 
-				{
-					SQLiteStatement insert = Database.db.compileStatement("INSERT INTO products (code, barcode, description, sale_price, quantity, static, modified) VALUES(?,?,?,?,?,?,?)");
-					
-					for (int i = 0; i < itemCount; i++) 
-					{
-						
-						item = items.getJSONObject(i);
-						
-						String code = item.getString("product_code");
-						String barcode = item.getString("product_barcode");
-						String description = item.getString("description");
-						String salePrice = item.getString("sale_price");
-						String quantity = item.getString("quantity");
-						Boolean isStatic = item.getBoolean("is_static");
-						String modified = item.getString("modified_datetime");
-						
-						
-						insert.bindString(1, code);
-						insert.bindString(2, barcode);
-						insert.bindString(3, description);
-						insert.bindString(4, salePrice);
-						insert.bindString(5, quantity);
-						insert.bindString(6, isStatic.toString());
-						insert.bindString(7, modified);
-														
-						insert.execute();
-						insert.clearBindings();
-						
-						sendMessage(handler, TransferHandler.TRANSFER, i+start);
-					}
-					
-					Database.db.setTransactionSuccessful();
-					success = true;
-				}
-				
-				catch (Exception e) {
-				    String errMsg = (e.getMessage() == null) ? "bulkInsert failed" : e.getMessage();
-				    Log.e("bulkInsert:", errMsg);
-				}
-				finally {
-					Database.db.endTransaction();
-					
-				}					
+				success = Database.insertProductList(itemCount, start, items, handler);
+								
 				Log.d("DOWNLOAD", "stored products: "  + itemCount);				
 				
 			} else {
@@ -235,10 +183,7 @@ public class DownloadProducts extends WebServiceAction {
 		
 		if (count > 0) {
 			Log.d("DOWNLOAD", "Product count: " + count);
-			
-			/*if (count > 1000) {
-				count = 1000;
-			}*/
+						
 			
 			Database.db.execSQL("DELETE FROM products;");
 			

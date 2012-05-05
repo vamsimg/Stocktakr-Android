@@ -3,7 +3,7 @@ import java.io.*;
 import java.net.*;
 
 import org.apache.http.*;
-import org.apache.http.client.ClientProtocolException;
+
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -34,12 +34,6 @@ public class REST {
 	
 	private void sendMessage(int type) {
 		Message message = handler.obtainMessage(type);
-		
-		handler.sendMessage(message);
-	}
-	
-	private void sendMessage(int type, int arg) {
-		Message message = handler.obtainMessage(type, arg, 0);
 		
 		handler.sendMessage(message);
 	}
@@ -79,62 +73,40 @@ public class REST {
 			
 			int responseCode = conn.getResponseCode();
 				
-			if (responseCode != HttpURLConnection.HTTP_OK) {
+			if (responseCode != HttpURLConnection.HTTP_OK) 
+			{
 				System.out.println("Error");
-
-				//sendMessage(handler, TransferHandler.ERROR);
-				//tracker.error();
-				
 				return null;
 			}
 				
 			total = conn.getContentLength();
 			
-			//sendMessage(handler, TransferHandler.BEGIN, total);
-			//tracker.begin(total);
-			
+
 			in = new InputStreamReader(conn.getInputStream());
 			
 			builder = new StringBuilder();
 			
 			int count;
-			int progress = 0;
 			
 			char[] buffer = new char[1000];
 				
 			if (total > 0) {
-				while ((count = in.read(buffer, 0, buffer.length)) > -1) {
-					progress += count;
-					
-					//sendMessage(handler, TransferHandler.TRANSFER, progress);
-					//tracker.track(progress);
+				while ((count = in.read(buffer, 0, buffer.length)) > -1) 
+				{
 					
 					builder.append(buffer, 0, count);
-				}
-				
-				//sendMessage(handler, TransferHandler.COMPLETE);
-				//tracker.complete();
-								
+				}					
 				json = new JSONObject(builder.toString());
 			}
 			
 			in.close();
 			
 			conn.disconnect();
-		} catch (MalformedURLException mue) {
-			//tracker.error();
-			//sendMessage(handler, TransferHandler.ERROR);
-			
+		} catch (MalformedURLException mue) {			
 			Log.d("REST", "malformed url: " + mue.getMessage());
-		} catch (IOException ioe) {
-			//tracker.error();
-			//sendMessage(handler, TransferHandler.ERROR);
-			
+		} catch (IOException ioe) {			
 			Log.d("REST", "connection error: " + ioe.getMessage());
-		} catch (JSONException e) {
-			//tracker.error();
-			//sendMessage(handler, TransferHandler.ERROR);
-			
+		} catch (JSONException e) {			
 			Log.d("REST", "malformed json: " + e.getMessage());
 		}
 		

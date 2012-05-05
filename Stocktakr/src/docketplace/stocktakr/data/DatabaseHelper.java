@@ -1,51 +1,43 @@
 package docketplace.stocktakr.data;
 
-import docketplace.stocktakr.R;
-
 import android.content.Context;
-import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-	private static final String DATABASE_NAME    = "stocktakr.db";
+	private static final String DATABASE_NAME    = "stocktakr";
 	private static final int    DATABASE_VERSION = 5;
 	
-	private Resources resources;
+	
 	
 	public DatabaseHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
-
-		this.resources = context.getResources();
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// Create Settings table
-		db.execSQL(resources.getString(R.string.create_settings));
+		db.execSQL("CREATE TABLE settings (store_id  TEXT, password TEXT, set_quantity BOOLEAN)");
 		
 		// Insert default settings
-		db.execSQL(resources.getString(R.string.default_settings));
+		db.execSQL("INSERT INTO settings (store_id, password, set_quantity) VALUES(\'\', \'\', \'true\')");
 		
 		// Create Products table
-		db.execSQL(resources.getString(R.string.create_products));
+		db.execSQL("CREATE TABLE products ( code TEXT, barcode TEXT, description TEXT , sale_price TEXT, quantity REAL, timestamp TEXT)");
 		
-		// Create Stocktake table
-		db.execSQL(resources.getString(R.string.create_stocktake));
+		// Create StocktakeRecord table
+		db.execSQL("CREATE TABLE stockRecords ( code TEXT, barcode TEXT, description TEXT , quantity REAL, timestamp TEXT)");		
 		
-		// Create Stocktake-Products mapping table
-		db.execSQL(resources.getString(R.string.create_stocktake_products));
 	}
 
 	@Override
-	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) 
+	{
 		db.execSQL("DROP TABLE settings;");
-
-		// Create Products table
-		db.execSQL(resources.getString(R.string.create_settings));	
+		db.execSQL("DROP TABLE products;");
+		db.execSQL("DROP TABLE stockRecords;");
 		
-		// Insert default settings
-		db.execSQL(resources.getString(R.string.default_settings));
+		 // Create tables again
+        onCreate(db);
 	}
-
 }

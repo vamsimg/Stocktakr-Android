@@ -1,7 +1,7 @@
 package docketplace.stocktakr.components;
 
 import docketplace.stocktakr.R;
-import docketplace.stocktakr.activities.PerformStocktake;
+
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -18,17 +18,17 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
 	
 	private EditText quantityInput; 
 
-	private Activity activity;
+
 	private Context  context;
 	
 	private InputMethodManager input;
+	private Activity instance;
 	
 	public QuantityDialog(Activity activity, QuantityListener listener) {
-		this.activity = activity;
+		instance = activity;
 		this.listener = listener;
 		
-		context = PerformStocktake.instance; //activity.getApplicationContext();
-		
+		context = activity;
         quantityInput = new EditText(context);
         
         quantityInput.setSingleLine(true);
@@ -45,35 +45,36 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
         input = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
 	}
 	
-	public void show(String code, String description, float currentQuantity) {
-		quantityInput.setText(String.valueOf(currentQuantity));
+	public void show(String code, String description, double quantity) {
+		quantityInput.setText(String.valueOf(quantity));
 		
 		quantityInput.selectAll();
 		
 		quantityDialog.setTitle(context.getString(R.string.quantity_for) + code);
 		quantityDialog.setMessage(description);
 		
-		PerformStocktake.instance.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+		instance.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 		
 		quantityDialog.show();
 	}
 
 	public void onClick(DialogInterface dialog, int button) {
 		if (dialog == quantityDialog) {
-			if (PerformStocktake.instance.getCurrentFocus() != null) {
-				input.hideSoftInputFromWindow(PerformStocktake.instance.getCurrentFocus().getWindowToken(), 0);
-			}
-			
-			if (button == DialogInterface.BUTTON_POSITIVE) {
-				float quantity;
+			if (button == DialogInterface.BUTTON_POSITIVE) 
+			{
+				double quantity;
 				
-				try {
-					quantity = Float.parseFloat(quantityInput.getText().toString());
+				try 
+				{
+					quantity = Double.parseDouble(quantityInput.getText().toString());
 					
-					if (listener != null) {
+					if (listener != null) 
+					{
 						listener.onChangeQuantity(quantity);
 					}
-				} catch (NumberFormatException nfe) {
+				} 
+				catch (NumberFormatException nfe) 
+				{
 					// not sure what to do here just yet
 				}
 			} else if (button == DialogInterface.BUTTON_NEGATIVE) {

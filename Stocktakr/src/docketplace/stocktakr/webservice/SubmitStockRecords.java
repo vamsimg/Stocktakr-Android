@@ -1,8 +1,6 @@
 package docketplace.stocktakr.webservice;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,15 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URLEncoder;
-import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
-import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
-
 import org.json.*;
 
 import android.content.Context;
@@ -26,20 +20,17 @@ import android.os.Build;
 import android.util.Base64;
 import android.util.Log;
 
-import docketplace.stocktakr.components.SubmissionListener;
 import docketplace.stocktakr.data.*;
 
 
 public class SubmitStockRecords extends WebServiceAction {
 	private String personName;
 	private Context currentContext;
-	private SubmissionListener listener;
 	
-	public SubmitStockRecords(TransferHandler handler, String personName, SubmissionListener listener, Context now) {	
+	public SubmitStockRecords(TransferHandler handler, String personName, Context now) {	
 		super(handler);
 		currentContext = now;	
-		this.personName = personName;
-		this.listener = listener;
+		this.personName = personName;		
 	}
 	
 	private JSONObject buildStockRecord(StockRecord record) throws JSONException {
@@ -54,10 +45,12 @@ public class SubmitStockRecords extends WebServiceAction {
 		return json;
 	}
 	
-	private JSONArray buildStockList() throws JSONException {
+	private JSONArray buildStockList() throws JSONException 
+	{
 		JSONArray json = new JSONArray();
 		
-		for (StockRecord record : Database.stock) {
+		for (StockRecord record : Database.getAllStockRecords()) 
+		{
 			json.put(buildStockRecord(record));
 		}
 
@@ -153,14 +146,11 @@ public class SubmitStockRecords extends WebServiceAction {
 			
 			if (responseCode == HttpURLConnection.HTTP_OK) {
 				Log.d("SUBMIT", "success");
-				
-				Database.stock.clear();
-				
-				if (listener != null) {
-					listener.submitComplete();
-				}
+				Database.deleteAllRecords();				
 				
 				sendMessage(TransferHandler.COMPLETE);
+				
+				
 			}
 		} catch (JSONException e) {
 			Log.d("SUBMIT", "Exception: " + e.getMessage());

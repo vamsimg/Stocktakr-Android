@@ -1,7 +1,7 @@
 package docketplace.stocktakr.webservice;
 
 import android.os.Message;
-import docketplace.stocktakr.data.AppSettings;
+import docketplace.stocktakr.data.Settings;
 import docketplace.stocktakr.data.Database;
 
 public class WebServiceAction extends Thread {
@@ -9,7 +9,7 @@ public class WebServiceAction extends Thread {
 	
 	protected REST rest;
 	
-	protected AppSettings settings;
+	protected Settings settings;
 	
 	public WebServiceAction(TransferHandler handler) {
 		this.handler = handler;

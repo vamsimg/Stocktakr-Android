@@ -6,26 +6,26 @@ import java.util.*;
 public class StockRecord {
 	private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	
-	private static String currentTimestamp() {
+	public static String currentTimestamp() {
 		 return formatter.format(new Date());
 	}
 	
 	public String code;
 	public String barcode;
 	public String description;
-	public float  quantity;
+	public double  quantity;
 	public String timestamp;
 
-	public StockRecord(String code, String barcode, String description) {
+	public StockRecord(String code, String barcode, String description, double quantity, String timestamp) {
 		this.code        = code;
 		this.barcode     = barcode;
 		this.description = description;
-		this.quantity    = 1;
+		this.quantity    = quantity;
+		this.timestamp   = timestamp;
 		
-		this.timestamp = currentTimestamp();
 	}
 
-	public float increment() {
+	public double increment() {
 		quantity++;
 		
 		this.timestamp = currentTimestamp();
@@ -33,7 +33,7 @@ public class StockRecord {
 		return quantity;
 	}
 
-	public void setQuantity(float quantity) {
+	public void setQuantity(double quantity) {
 		this.quantity = quantity;
 		
 		this.timestamp = currentTimestamp();

@@ -56,7 +56,7 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item == settingsMenu) {
-            startActivity(new Intent(Stocktakr.this, Settings.class));
+            startActivity(new Intent(Stocktakr.this, SettingsView.class));
 
             return true;
         }
@@ -71,16 +71,20 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
     	Database.close();
     }
 
-	public void onClick(View v) {
-		if (v == downloadProducts) {
-			download = new DownloadProducts(handler, getBaseContext());
-			
+	public void onClick(View v) 
+	{
+		if (v == downloadProducts) 
+		{
+			download = new DownloadProducts(handler, getBaseContext());			
 			download.start();
-		} else if (v == performStocktake) {
-			startActivity(new Intent(Stocktakr.this, PerformStocktake.class));
-		} else if (v == priceCheck) {
+		}
+		else if (v == performStocktake) 
+		{
+			startActivity(new Intent(Stocktakr.this, StocktakeHome.class));
+		}
+		else if (v == priceCheck) 
+		{
 			startActivity(new Intent(Stocktakr.this, PriceCheck.class));
 		}
 	}
-
 }
