@@ -203,7 +203,7 @@ public class ScanItems extends SherlockActivity implements OnClickListener, OnEd
 				Database.updateStockRecord(foundStock);		
 
 				// Get instance of Vibrator from current Context
-				Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);				 
+				Vibrator v = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);				 
 				// Vibrate for 100 milliseconds
 				v.vibrate(100);
 			}	
