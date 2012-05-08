@@ -133,8 +133,8 @@ public class ScanItems extends SherlockActivity implements OnClickListener, OnEd
 				
 			} else {
 				description.setText(product.description);				
-				scanned.setText(getString(R.string.barcode_label) + product.barcode);
-				salePrice.setText(getString(R.string.price_label) + product.price);
+				scanned.setText("Barcode: " + product.barcode);
+				salePrice.setText("Sale Price: " + product.price);
 				
 				currentProduct = recordStock(product.code, product.barcode, product.description);
 				

@@ -70,6 +70,16 @@ public class Database {
     
     
     //Products CRUD
+    public static int getProductCount() 
+	{
+         String countQuery = "SELECT  * FROM products";    
+         Cursor cursor = db.rawQuery(countQuery, null);
+         int count  = cursor.getCount(); 
+         cursor.close();
+         // return count
+         return count; 
+    }
+    
     
     public static Product findProduct(String barcode) 
     {
