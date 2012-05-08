@@ -35,6 +35,7 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
         quantityInput.setSelectAllOnFocus(true);
         quantityInput.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         
+        
         quantityDialog = new AlertDialog.Builder(context)
 							.setTitle(R.string.change_quantity)
 							.setView(quantityInput)
@@ -53,8 +54,6 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
 		quantityDialog.setTitle(context.getString(R.string.quantity_for) + code);
 		quantityDialog.setMessage(description);
 		
-		instance.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
-		
 		quantityDialog.show();
 	}
 
@@ -71,6 +70,7 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
 					if (listener != null) 
 					{
 						listener.onChangeQuantity(quantity);
+						listener.hideKeyboard();
 					}
 				} 
 				catch (NumberFormatException nfe) 
@@ -78,6 +78,7 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
 					// not sure what to do here just yet
 				}
 			} else if (button == DialogInterface.BUTTON_NEGATIVE) {
+				listener.hideKeyboard();
 				quantityDialog.dismiss();				
 			}
 		}

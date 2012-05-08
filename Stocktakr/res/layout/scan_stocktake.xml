@@ -20,8 +20,9 @@
             android:layout_weight="1"
             android:ems="10"
             android:imeOptions="actionSearch"
-            android:layout_margin="4dip"/>
-        <requestFocus />
+            android:layout_margin="4dip">            
+        	<requestFocus />        
+        </EditText>
     </LinearLayout>
 	<LinearLayout
 	    android:id="@+id/product_info"

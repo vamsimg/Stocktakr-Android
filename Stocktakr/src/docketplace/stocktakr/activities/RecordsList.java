@@ -121,7 +121,7 @@ public class RecordsList  extends SherlockActivity implements OnItemClickListene
 		hideKeyboard();
 	}
 	
-	private void hideKeyboard()
+	public void hideKeyboard()
 	{		
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 	}
