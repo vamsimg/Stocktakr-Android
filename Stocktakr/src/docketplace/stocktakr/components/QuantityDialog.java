@@ -55,8 +55,8 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
 		quantityDialog.setMessage(description);
 		
 		quantityDialog.show();
+		quantityDialog.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 	}
-
 	public void onClick(DialogInterface dialog, int button) {
 		if (dialog == quantityDialog) {
 			if (button == DialogInterface.BUTTON_POSITIVE) 

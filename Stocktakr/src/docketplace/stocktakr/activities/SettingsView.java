@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.*;
 import android.content.*;
+import android.content.res.Configuration;
 
 
 
@@ -44,7 +45,8 @@ public class SettingsView extends SherlockActivity implements OnClickListener, C
         handler = new TransferHandler(this, "Testing connection", "Login Success", "Login Error");
         
         testConnection = (Button)findViewById(R.id.test_connection);
-
+               
+        
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         

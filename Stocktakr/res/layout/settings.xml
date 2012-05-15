@@ -21,7 +21,9 @@
         android:layout_marginTop="0dip"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:ems="10" >
+        android:ems="10" 
+        android:inputType="number"
+        android:selectAllOnFocus="true">
 
         <requestFocus />
 
@@ -46,7 +48,8 @@
         android:layout_marginTop="0dip"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:ems="10"/>
+        android:ems="10"
+        android:selectAllOnFocus="true"/>
 
      <Button
         android:id="@+id/test_connection"

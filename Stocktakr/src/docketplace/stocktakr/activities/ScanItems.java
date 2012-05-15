@@ -233,5 +233,5 @@ public class ScanItems extends SherlockActivity implements OnClickListener, OnEd
 	public void hideKeyboard()
 	{
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-	}
+	}	
 }
