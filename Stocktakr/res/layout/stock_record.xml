@@ -13,15 +13,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="[barcode]"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+             />
+        
         <TextView
             android:id="@+id/stock_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="right"
             android:text="[#]"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textAppearance="?android:attr/textAppearanceLarge" android:paddingRight="20dip"/>
     </TableRow>
 
     <TableRow
@@ -34,7 +35,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="[description]"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        
+
     </TableRow>
 
 </TableLayout>

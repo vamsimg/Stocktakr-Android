@@ -63,6 +63,13 @@
 	      android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_gravity="center_horizontal"
-	      android:text="Set Quantity After Scan" />
+	      android:text="Scan and manual count ?" />
+
+	  <CheckBox
+	      android:id="@+id/autocount_checkBox"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_gravity="center_horizontal"
+	      android:text="Scan and auto count      ?" />
      
 </LinearLayout>

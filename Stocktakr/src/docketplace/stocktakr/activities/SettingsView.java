@@ -22,6 +22,7 @@ public class SettingsView extends SherlockActivity implements OnClickListener, C
 	private EditText storeID;
 	private EditText password;
 	private CheckBox setQuantity;
+	private CheckBox autoCount;
 	
 	private Button testConnection;
 	
@@ -41,6 +42,7 @@ public class SettingsView extends SherlockActivity implements OnClickListener, C
         storeID     = (EditText)findViewById(R.id.store_id);
         password    = (EditText)findViewById(R.id.password);
         setQuantity = (CheckBox)findViewById(R.id.set_quantity);
+        autoCount   = (CheckBox)findViewById(R.id.autocount_checkBox);
         
         handler = new TransferHandler(this, "Testing connection", "Login Success", "Login Error");
         
@@ -53,6 +55,7 @@ public class SettingsView extends SherlockActivity implements OnClickListener, C
         loadSettings();
         
         setQuantity.setOnCheckedChangeListener(this);
+        autoCount.setOnCheckedChangeListener(this);
         
         testConnection.setOnClickListener(this);
     }
@@ -75,9 +78,7 @@ public class SettingsView extends SherlockActivity implements OnClickListener, C
     }
     
     @Override
-    public void onBackPressed() {
-    	saveSettings();
-    	
+    public void onBackPressed() {    	
     	finish();
     }
     
@@ -88,7 +89,7 @@ public class SettingsView extends SherlockActivity implements OnClickListener, C
         	storeID.setText(settings.storeID);
         	password.setText(settings.password);
         	setQuantity.setChecked(settings.setQuantity);
-        	
+        	autoCount.setChecked(!settings.setQuantity);
         	setQuantityChecked = settings.setQuantity;
         }
     }
@@ -115,12 +116,20 @@ public class SettingsView extends SherlockActivity implements OnClickListener, C
 			{
 				Toast.makeText(this, "Enter a StoreID and Password", Toast.LENGTH_SHORT).show();
 			}
+			saveSettings();
 		}
 	}
 
 	public void onCheckedChanged(CompoundButton button, boolean isChecked) {
 		if (button == setQuantity) {
 			setQuantityChecked = isChecked;
+			autoCount.setChecked(!isChecked);
+			saveSettings();
+		}
+		else if (button == autoCount) {
+			setQuantityChecked = !isChecked;
+			setQuantity.setChecked(!isChecked);
+			saveSettings();
 		}
 	}	
 }
