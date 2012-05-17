@@ -9,6 +9,7 @@ import com.actionbarsherlock.view.*;
 
 import android.os.*;
 import android.content.*;
+import android.util.Log;
 import android.view.View;
 import android.view.View.*;
 import android.widget.*;
@@ -75,8 +76,17 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
 	{
 		if (v == downloadProducts) 
 		{
-			download = new DownloadProducts(handler, getBaseContext());			
-			download.start();
+			Settings credentials = Database.getSettings(); 
+			if(credentials.storeID.length() != 0 && credentials.password.length()!= 0)
+			{
+				download = new DownloadProducts(handler, getBaseContext());			
+				download.start();
+			}
+			else
+			{
+				Toast.makeText(this, "Enter a StoreID and Password in Settings", Toast.LENGTH_SHORT).show();
+			}
+			
 		}
 		else if (v == performStocktake) 
 		{

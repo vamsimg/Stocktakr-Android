@@ -40,10 +40,8 @@ public class SubmitRecords  extends SherlockActivity implements OnClickListener 
         submit = (Button)findViewById(R.id.submit_button);
         
         productCounter = (TextView)findViewById(R.id.product_counter);
-       
-		int count = Database.getStockRecordCount();	
-      
-		productCounter.setText(getString(R.string.products) + count);
+             
+		updateStockCount();
         
         submit.setOnClickListener(this);   
         
@@ -96,6 +94,6 @@ public class SubmitRecords  extends SherlockActivity implements OnClickListener 
 	
 	public void updateStockCount() 
 	{		 
-		productCounter.setText(getString(R.string.products) + Database.getStockRecordCount());
+		productCounter.setText("Stocktake Records: " + Database.getStockRecordCount());
 	}
 }
