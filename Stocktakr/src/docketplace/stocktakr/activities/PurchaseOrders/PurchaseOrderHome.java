@@ -1,4 +1,4 @@
-package docketplace.stocktakr.activities;
+package docketplace.stocktakr.activities.PurchaseOrders;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,17 +12,17 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 
 import docketplace.stocktakr.R;
+import docketplace.stocktakr.activities.Stocktakr;
 import docketplace.stocktakr.data.Database;
 
-
-public class StocktakeHome extends SherlockActivity implements OnClickListener {
+public class PurchaseOrderHome extends SherlockActivity implements OnClickListener {
 	
 	private Button scanItem;
-	private Button recordsList;
-	private Button submitRecords;
+	private Button itemList;
+	private Button submitOrder;
 	
 	private TextView products;
-	private TextView records;
+	private TextView items;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,22 +30,22 @@ public class StocktakeHome extends SherlockActivity implements OnClickListener {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.stocktake_home);
+        setContentView(R.layout.purchaseorder_home);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
        
         scanItem = (Button)findViewById(R.id.scanitem_button);
-        recordsList = (Button)findViewById(R.id.records_button);
-        submitRecords       = (Button)findViewById(R.id.submitrecords_button);
+        itemList = (Button)findViewById(R.id.itemslist_button);
+        submitOrder       = (Button)findViewById(R.id.submitpurchaseorder_button);
         products = (TextView)findViewById(R.id.productcount_textView);
-        records = (TextView)findViewById(R.id.recordcount_textView);
+        items = (TextView)findViewById(R.id.itemcount_textView);
         
         scanItem.setOnClickListener(this);
-        recordsList.setOnClickListener(this);
-        submitRecords.setOnClickListener(this);
+        itemList.setOnClickListener(this);
+        submitOrder.setOnClickListener(this);
         
         products.setText("Product Count: " + Database.getProductCount());
-        records.setText("Total Records: " + Database.getStockRecordCount());
+        items.setText("Total Items in Current Order: " + Database.getPurchaseOrderItemCount());
         
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -69,17 +69,16 @@ public class StocktakeHome extends SherlockActivity implements OnClickListener {
 	{
 		if (v == scanItem) 
 		{
-			startActivity(new Intent(StocktakeHome.this, ScanItems.class));
+			startActivity(new Intent(PurchaseOrderHome.this, PurchaseOrderScanItem.class));
 		}
-		else if (v == recordsList) 
+		else if (v == itemList) 
 		{
-			startActivity(new Intent(StocktakeHome.this, StocktakeRecordsList.class));
+			startActivity(new Intent(PurchaseOrderHome.this, PurchaseOrderList.class));
 		}		
-		else if (v == submitRecords) 
+		else if (v == submitOrder) 
 		{
-			startActivity(new Intent(StocktakeHome.this, SubmitRecords.class));
+			startActivity(new Intent(PurchaseOrderHome.this, PurchaseOrderSubmit.class));
 		}
 	}
-
-
 }
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/barcode"
+            android:singleLine="true"
+            android:hint="Product Barcode"
+            android:selectAllOnFocus="true"
+            android:focusable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:imeOptions="actionSearch"
+            android:layout_margin="4dip">            
+        	<requestFocus />        
+        </EditText>
+    </LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/product_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_margin="8dip">
+	
+	        <TextView
+	        android:id="@+id/quantity_label"
+	        android:text="@string/quantity"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	        
+	        <Button
+	            android:id="@+id/update_quantity"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:focusable="false"
+	            android:text=" ? "/>	       
+	
+	    </LinearLayout>
+	
+	    <TextView
+	        android:id="@+id/description_label"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:layout_margin="8dip"
+	        android:text="(description)"/>
+	    
+	    <TextView
+	        android:id="@+id/scanned_barcode"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:layout_margin="8dip"
+	        android:text="(barcode)"/>
+	
+	    <TextView
+	        android:id="@+id/sale_price_label"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="8dip"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:text="(price)"/>
+    </LinearLayout>
+
+	 
+
+	<TextView
+	        android:id="@+id/product_not_found"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="8dip"
+	        android:text="@string/product_not_found_message"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+	        android:visibility="gone"/>
+	    
+	    
+	
+</LinearLayout>

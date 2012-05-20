@@ -1,6 +1,7 @@
 package docketplace.stocktakr.activities;
 
 import docketplace.stocktakr.*;
+import docketplace.stocktakr.activities.PurchaseOrders.PurchaseOrderHome;
 import docketplace.stocktakr.data.*;
 import docketplace.stocktakr.webservice.*;
 
@@ -17,6 +18,7 @@ import android.widget.*;
 public class Stocktakr extends SherlockActivity implements OnClickListener {
 	private Button downloadProducts;
 	private Button performStocktake;
+	private Button purchaseOrder;
 	private Button priceCheck;
 
 	private MenuItem settingsMenu;
@@ -30,7 +32,7 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.stocktakr);
+        setContentView(R.layout.home);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -38,12 +40,14 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
 
         downloadProducts = (Button)findViewById(R.id.download_products_button);
         performStocktake = (Button)findViewById(R.id.perform_stocktake_button);
+        purchaseOrder    = (Button)findViewById(R.id.purchaseorder_button);
         priceCheck       = (Button)findViewById(R.id.price_check_button);
         
         handler = new TransferHandler(this, "Downloading Products", "Downloaded Products", "Error downloading products");
 
         downloadProducts.setOnClickListener(this);
         performStocktake.setOnClickListener(this);
+        purchaseOrder.setOnClickListener(this);
         priceCheck.setOnClickListener(this);
     }
 
@@ -91,6 +95,10 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
 		else if (v == performStocktake) 
 		{
 			startActivity(new Intent(Stocktakr.this, StocktakeHome.class));
+		}
+		else if (v == purchaseOrder) 
+		{
+			startActivity(new Intent(Stocktakr.this, PurchaseOrderHome.class));
 		}
 		else if (v == priceCheck) 
 		{

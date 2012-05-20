@@ -27,7 +27,7 @@ import docketplace.stocktakr.components.QuantityListener;
 import docketplace.stocktakr.data.Database;
 import docketplace.stocktakr.data.StockRecord;
 
-public class RecordsList  extends SherlockActivity implements OnItemClickListener, OnItemLongClickListener, QuantityListener, DialogInterface.OnClickListener {
+public class StocktakeRecordsList  extends SherlockActivity implements OnItemClickListener, OnItemLongClickListener, QuantityListener, DialogInterface.OnClickListener {
 	
 	private ListView stockList;
 	

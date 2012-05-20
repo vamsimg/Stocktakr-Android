@@ -1,4 +1,4 @@
-package docketplace.stocktakr.activities;
+package docketplace.stocktakr.activities.PurchaseOrders;
 
 import java.util.List;
 
@@ -25,19 +25,19 @@ import docketplace.stocktakr.R;
 import docketplace.stocktakr.components.QuantityDialog;
 import docketplace.stocktakr.components.QuantityListener;
 import docketplace.stocktakr.data.Database;
-import docketplace.stocktakr.data.StockRecord;
+import docketplace.stocktakr.data.PurchaseOrderItem;
 
-public class RecordsList  extends SherlockActivity implements OnItemClickListener, OnItemLongClickListener, QuantityListener, DialogInterface.OnClickListener {
+public class PurchaseOrderList  extends SherlockActivity implements OnItemClickListener, OnItemLongClickListener, QuantityListener, DialogInterface.OnClickListener {
 	
-	private ListView stockList;
+	private ListView itemListView;
 	
 	private QuantityDialog quantityDialog;
 	
-	private StockRecord selectedRecord;	
+	private PurchaseOrderItem selectedItem;	
 	
 	private AlertDialog removeDialog; 
 	
-	private List<StockRecord> stockRecords;
+	private List<PurchaseOrderItem> itemList;
 	
 	
 	 @Override
@@ -49,14 +49,14 @@ public class RecordsList  extends SherlockActivity implements OnItemClickListene
 		
 		setContentView(R.layout.item_list);
 		
-		stockRecords = Database.getAllStockRecords();	        	
+		itemList = Database.getAllPurchaseOrderItems();	        	
 		
-		stockList = (ListView)findViewById(R.id.items_listview);
+		itemListView = (ListView)findViewById(R.id.items_listview);
 		
-		stockList.setAdapter(new StockAdapter(this, stockRecords));
+		itemListView.setAdapter(new ItemArrayAdaptor(this, itemList));
 		
-		stockList.setOnItemClickListener(this);
-		stockList.setOnItemLongClickListener(this);
+		itemListView.setOnItemClickListener(this);
+		itemListView.setOnItemLongClickListener(this);
 		
 		quantityDialog = new QuantityDialog(this, this);
 		
@@ -75,7 +75,7 @@ public class RecordsList  extends SherlockActivity implements OnItemClickListene
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(this, StocktakeHome.class);
+                Intent intent = new Intent(this, PurchaseOrderHome.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 return true;
@@ -87,18 +87,18 @@ public class RecordsList  extends SherlockActivity implements OnItemClickListene
     
     
 	private void setQuantity() {
-		quantityDialog.show(selectedRecord.barcode, selectedRecord.description, selectedRecord.quantity);
+		quantityDialog.show(selectedItem.barcode, selectedItem.description, selectedItem.quantity);
 	}
 
 	public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-		selectedRecord = stockRecords.get(position);			
+		selectedItem = itemList.get(position);			
 		
 		setQuantity();
 	}
 	
 	public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
-		selectedRecord = 	stockRecords.get(position);			
-		removeDialog.setTitle("Remove " + selectedRecord.barcode);
+		selectedItem = 	itemList.get(position);			
+		removeDialog.setTitle("Remove " + selectedItem.barcode);
 
 		removeDialog.show();
 		
@@ -108,15 +108,15 @@ public class RecordsList  extends SherlockActivity implements OnItemClickListene
 	public void onClick(DialogInterface dialog, int button) {
 		if (button == DialogInterface.BUTTON_POSITIVE) {
 			removeDialog.dismiss();			
-			Database.deleteRecord(selectedRecord);
+			Database.deletePurchaseOrderItem(selectedItem);
 			refreshList();
 			hideKeyboard();
 		}
 	}
 
 	public void onChangeQuantity(double newQuantity) {
-		selectedRecord.setQuantity(newQuantity);
-		Database.updateStockRecord(selectedRecord);	
+		selectedItem.quantity = newQuantity;
+		Database.updatePurchaseOrderItem(selectedItem);	
 		refreshList();
 		hideKeyboard();
 	}
@@ -128,19 +128,19 @@ public class RecordsList  extends SherlockActivity implements OnItemClickListene
 	
 	private void refreshList()
 	{
-		stockRecords = Database.getAllStockRecords();	        	
-		stockList.setAdapter(new StockAdapter(this, stockRecords));
+		itemList = Database.getAllPurchaseOrderItems();	        	
+		itemListView.setAdapter(new ItemArrayAdaptor(this, itemList));
 	}
 	
 	
-	private class StockAdapter extends ArrayAdapter<StockRecord> 
+	private class ItemArrayAdaptor extends ArrayAdapter<PurchaseOrderItem> 
 	{
-	    public List<StockRecord> stockRecords;
+	    public List<PurchaseOrderItem> orderItems;
 
-	    public StockAdapter(Context context, List<StockRecord> records) 
+	    public ItemArrayAdaptor(Context context, List<PurchaseOrderItem> records) 
 	    {
 	        super(context, R.layout.product_record, records);	        
-	        this.stockRecords = records;
+	        this.orderItems = records;
 	    }
 
 	    @Override
@@ -154,7 +154,7 @@ public class RecordsList  extends SherlockActivity implements OnItemClickListene
 	            v = vi.inflate(R.layout.product_record, null);
 	        }
 
-	        StockRecord record = stockRecords.get(position);
+	        PurchaseOrderItem record = orderItems.get(position);
 
 	        if (record != null)
 	        {

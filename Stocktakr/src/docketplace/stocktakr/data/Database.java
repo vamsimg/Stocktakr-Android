@@ -266,5 +266,94 @@ public class Database {
 	{		
 		db.delete("stockRecords", null, null);		
 	}
+	
+	
+	//Purchase Order Items CRUD
+    
+    public static void addPurchaseOrderItem(PurchaseOrderItem item) 
+    {
+        ContentValues values = new ContentValues();
+        values.put("code", item.code);
+        values.put("barcode", item.barcode); 
+        values.put("description", item.description);
+        values.put("quantity", item.quantity);
+                
+        // Inserting Row
+        db.insert("purchaseOrderItems", null, values);       
+    }
+    
+
+    public static PurchaseOrderItem getPurchaseOrderItem(String code) 
+    {        
+    	PurchaseOrderItem item = null;
+        
+        Cursor cursor = db.query("purchaseOrderItems", new String[] { "code", "barcode", "description", "quantity"}, "code= ?", new String[] {code} , null, null, null);
+        
+        if(cursor.moveToFirst())
+        {
+        	item = new PurchaseOrderItem(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getDouble(3));
+        }
+        cursor.close();
+         
+        return item;
+    }
+    
+
+    public static List<PurchaseOrderItem> getAllPurchaseOrderItems() 
+    {
+        List<PurchaseOrderItem> recordList = new ArrayList<PurchaseOrderItem>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM purchaseOrderItems";
+        
+        Cursor cursor = db.rawQuery(selectQuery, null);
+     
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) 
+        {
+            do 
+            {
+            	PurchaseOrderItem record = new PurchaseOrderItem(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getDouble(3));
+                // Adding contact to list
+            	 recordList.add(record);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        
+        return recordList;
+    }
+        
+
+	public static int getPurchaseOrderItemCount() 
+	{
+         String countQuery = "SELECT  * FROM purchaseOrderItems";    
+         Cursor cursor = db.rawQuery(countQuery, null);
+         int count  = cursor.getCount(); 
+         cursor.close();
+         // return count
+         return count; 
+    }
+	
+	public static int updatePurchaseOrderItem(PurchaseOrderItem record) 
+	{	    
+	    ContentValues values = new ContentValues();
+	    values.put("code", record.code);
+        values.put("barcode", record.barcode); 
+        values.put("description", record.description);
+        values.put("quantity", record.quantity);
+        	    
+        
+        int rowsAffected = db.update("purchaseOrderItems", values, "code = ?", new String[] {record.code});
+	    return rowsAffected ;
+	}
+	
+	public static void deletePurchaseOrderItem(PurchaseOrderItem record) 
+	{		
+		db.delete("purchaseOrderItems", "code = ?", new String[] {record.code});	
+	}
+	
+	public static void deleteAllPurchaseOrderItems() 
+	{		
+		db.delete("purchaseOrderItems", null, null);		
+	}
 
 }

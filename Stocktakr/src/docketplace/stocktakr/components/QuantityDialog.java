@@ -9,23 +9,17 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.text.InputType;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 public class QuantityDialog implements DialogInterface.OnClickListener {
 	private AlertDialog      quantityDialog;
-	private QuantityListener listener;
-	
+	private QuantityListener listener;	
 	private EditText quantityInput; 
-
-
 	private Context  context;
 	
-	private InputMethodManager input;
-	private Activity instance;
 	
 	public QuantityDialog(Activity activity, QuantityListener listener) {
-		instance = activity;
+	
 		this.listener = listener;
 		
 		context = activity;
@@ -43,7 +37,7 @@ public class QuantityDialog implements DialogInterface.OnClickListener {
 							.setNegativeButton(R.string.cancel, this)
 							.create();
         
-        input = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+    
 	}
 	
 	public void show(String code, String description, double quantity) {

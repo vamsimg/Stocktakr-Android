@@ -21,12 +21,16 @@
             </intent-filter>
         </activity>
         
-        <activity android:screenOrientation="portrait" android:name=".activities.PriceCheck" android:label="@string/price_check" />
-        <activity android:screenOrientation="portrait" android:name=".activities.SettingsView" android:label="@string/stocktakr_settings" />
+        <activity android:screenOrientation="portrait" android:name=".activities.PriceCheck" android:label="Price Check" />
+        <activity android:screenOrientation="portrait" android:name=".activities.SettingsView" android:label="Settings" />
         <activity android:name=".activities.StocktakeHome" android:label="Stocktake" android:screenOrientation="portrait"></activity>
-        <activity android:name=".activities.ScanItems" android:label="Scan Item" android:screenOrientation="portrait"></activity>
-        <activity android:name=".activities.RecordsList" android:label="Stocktake Records"></activity>
-        <activity android:name=".activities.SubmitRecords" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.ScanItems" android:label="Scan Stocktake Item" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.StocktakeRecordsList" android:label="Stocktake Records" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.SubmitRecords" android:screenOrientation="portrait" android:label="Upload Stocktake"></activity>
+        <activity android:name=".activities.PurchaseOrders.PurchaseOrderHome" android:screenOrientation="portrait" android:label="Purchase Order"></activity>
+        <activity android:label="Scan Purchase Order Item" android:name=".activities.PurchaseOrders.PurchaseOrderScanItem" android:screenOrientation="portrait"></activity>
+        <activity android:label="Purchase Order Items" android:name=".activities.PurchaseOrders.PurchaseOrderList" android:screenOrientation="portrait"></activity>
+        <activity android:label="Upload Purchase Order" android:screenOrientation="portrait" android:name=".activities.PurchaseOrders.PurchaseOrderSubmit"></activity>
     </application>
 
 </manifest>

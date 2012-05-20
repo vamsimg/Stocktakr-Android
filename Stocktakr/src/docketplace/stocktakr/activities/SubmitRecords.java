@@ -34,7 +34,7 @@ public class SubmitRecords  extends SherlockActivity implements OnClickListener 
 		setTheme(R.style.Theme_Sherlock_Light);
         super.onCreate(savedInstanceState);
         
-    	setContentView(R.layout.submit_stocktake);
+    	setContentView(R.layout.submit_itemlist);
         
         name   = (EditText)findViewById(R.id.person_name);
         submit = (Button)findViewById(R.id.submit_button);
