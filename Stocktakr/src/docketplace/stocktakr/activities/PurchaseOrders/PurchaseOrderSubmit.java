@@ -3,11 +3,13 @@ package docketplace.stocktakr.activities.PurchaseOrders;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -78,6 +80,9 @@ public class PurchaseOrderSubmit extends SherlockActivity implements OnClickList
 		
 		if (v == submit) 
 		{
+			InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+			imm.hideSoftInputFromWindow(name.getWindowToken(), 0);
+			
 			personName = name.getText().toString().trim();
 			
 			if (personName.length() == 0) 

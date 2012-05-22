@@ -90,8 +90,7 @@ public class TransferHandler extends Handler {
 
 	    		progress.dismiss();
 	    		
-	    		Toast.makeText(activity, completedMessage, Toast.LENGTH_SHORT).show();
-	    		
+	    		Toast.makeText(activity, completedMessage, Toast.LENGTH_SHORT).show();	    		
 	    		break;
 	    		
 	    	case ERROR:
