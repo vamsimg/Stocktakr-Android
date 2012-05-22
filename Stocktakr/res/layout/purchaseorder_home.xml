@@ -32,22 +32,7 @@
             android:layout_height="wrap_content"
             android:text="(Products)" />
 
-    </TableRow>
-
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.0" >
-
-        <TextView
-            android:id="@+id/itemcount_textView"
-            android:gravity="center" 
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="(Purchase Order Items)" />
-
-    </TableRow>
+    </TableRow>   
     
      <TableRow
         android:layout_width="wrap_content"

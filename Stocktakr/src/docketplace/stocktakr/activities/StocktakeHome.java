@@ -22,7 +22,7 @@ public class StocktakeHome extends SherlockActivity implements OnClickListener {
 	private Button submitRecords;
 	
 	private TextView products;
-	private TextView records;
+	
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,14 +38,14 @@ public class StocktakeHome extends SherlockActivity implements OnClickListener {
         recordsList = (Button)findViewById(R.id.records_button);
         submitRecords       = (Button)findViewById(R.id.submitrecords_button);
         products = (TextView)findViewById(R.id.productcount_textView);
-        records = (TextView)findViewById(R.id.recordcount_textView);
+       
         
         scanItem.setOnClickListener(this);
         recordsList.setOnClickListener(this);
         submitRecords.setOnClickListener(this);
         
         products.setText("Product Count: " + Database.getProductCount());
-        records.setText("Total Records: " + Database.getStockRecordCount());
+        
         
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

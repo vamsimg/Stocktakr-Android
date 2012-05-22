@@ -20,17 +20,20 @@ import android.os.Build;
 import android.util.Base64;
 import android.util.Log;
 
+import docketplace.stocktakr.components.SubmissionListener;
 import docketplace.stocktakr.data.*;
 
 
 public class SubmitStockRecords extends WebServiceAction {
 	private String personName;
 	private Context currentContext;
+	private SubmissionListener listener;
 	
-	public SubmitStockRecords(TransferHandler handler, String personName, Context now) {	
+	public SubmitStockRecords(TransferHandler handler, String personName, Context now, SubmissionListener listener) {	
 		super(handler);
 		currentContext = now;	
-		this.personName = personName;		
+		this.personName = personName;
+		this.listener = listener;
 	}
 	
 	private JSONObject buildStockRecord(StockRecord record) throws JSONException {
@@ -148,8 +151,10 @@ public class SubmitStockRecords extends WebServiceAction {
 				Log.d("SUBMIT", "success");
 				Database.deleteAllRecords();				
 				
+								
 				sendMessage(TransferHandler.COMPLETE);
 				
+				listener.submitComplete();
 				
 			}
 		} catch (JSONException e) {

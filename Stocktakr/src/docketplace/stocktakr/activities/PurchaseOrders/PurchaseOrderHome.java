@@ -22,7 +22,7 @@ public class PurchaseOrderHome extends SherlockActivity implements OnClickListen
 	private Button submitOrder;
 	
 	private TextView products;
-	private TextView items;
+	
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,14 +38,14 @@ public class PurchaseOrderHome extends SherlockActivity implements OnClickListen
         itemList = (Button)findViewById(R.id.itemslist_button);
         submitOrder       = (Button)findViewById(R.id.submitpurchaseorder_button);
         products = (TextView)findViewById(R.id.productcount_textView);
-        items = (TextView)findViewById(R.id.itemcount_textView);
+       
         
         scanItem.setOnClickListener(this);
         itemList.setOnClickListener(this);
         submitOrder.setOnClickListener(this);
         
         products.setText("Product Count: " + Database.getProductCount());
-        items.setText("Total Items in Current Order: " + Database.getPurchaseOrderItemCount());
+        
         
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

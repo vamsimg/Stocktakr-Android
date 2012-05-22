@@ -20,12 +20,13 @@ import com.actionbarsherlock.view.MenuItem;
 
 import docketplace.stocktakr.R;
 import docketplace.stocktakr.activities.StocktakeHome;
+import docketplace.stocktakr.components.SubmissionListener;
 import docketplace.stocktakr.data.Database;
 import docketplace.stocktakr.webservice.SubmitPurchaseOrder;
 import docketplace.stocktakr.webservice.SubmitStockRecords;
 import docketplace.stocktakr.webservice.TransferHandler;
 
-public class PurchaseOrderSubmit extends SherlockActivity implements OnClickListener {
+public class PurchaseOrderSubmit extends SherlockActivity implements OnClickListener, SubmissionListener {
 	
 	private EditText name;
 	private Button   submit;
@@ -93,7 +94,7 @@ public class PurchaseOrderSubmit extends SherlockActivity implements OnClickList
 			{
 				Log.d("SUBMIT", "starting");				
 
-				submitOrder = new SubmitPurchaseOrder(handler, name.getText().toString(), getBaseContext());
+				submitOrder = new SubmitPurchaseOrder(handler, name.getText().toString(), getBaseContext(), this);
 				
 				submitOrder.start();
 				
@@ -105,6 +106,11 @@ public class PurchaseOrderSubmit extends SherlockActivity implements OnClickList
 	public void updateStockCount() 
 	{		 
 		itemCounter.setText("Order Items: " + Database.getPurchaseOrderItemCount());
+	}
+	
+	public void submitComplete()
+	{
+		this.finish();	
 	}
 }
 

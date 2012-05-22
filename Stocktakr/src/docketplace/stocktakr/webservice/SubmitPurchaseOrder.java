@@ -12,16 +12,19 @@ import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 
+import docketplace.stocktakr.components.SubmissionListener;
 import docketplace.stocktakr.data.*;
 
 
 public class SubmitPurchaseOrder extends WebServiceAction {
 	private String personName;
+	private SubmissionListener listener;
 	
-	public SubmitPurchaseOrder(TransferHandler handler, String personName, Context now) 
+	public SubmitPurchaseOrder(TransferHandler handler, String personName, Context now, SubmissionListener listener ) 
 	{	
 		super(handler);
-		this.personName = personName;		
+		this.personName = personName;	
+		this.listener = listener;
 	}	
 	
 	private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
@@ -76,6 +79,7 @@ public class SubmitPurchaseOrder extends WebServiceAction {
 				Log.d("SUBMIT PO", "success");
 				Database.deleteAllPurchaseOrderItems();				
 				sendMessage(TransferHandler.COMPLETE);
+				listener.submitComplete();
 			}
 			
 		} catch (JSONException e) {
