@@ -1,4 +1,4 @@
-package docketplace.stocktakr.activities.PurchaseOrders;
+package docketplace.stocktakr.activities.receivedgoods;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,18 +16,19 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 
 import docketplace.stocktakr.R;
+import docketplace.stocktakr.activities.StocktakeHome;
 import docketplace.stocktakr.components.SubmissionListener;
 import docketplace.stocktakr.data.Database;
-import docketplace.stocktakr.webservice.SubmitPurchaseOrder;
+import docketplace.stocktakr.webservice.SubmitReceivedGoods;
 import docketplace.stocktakr.webservice.TransferHandler;
 
-public class PurchaseOrderSubmit extends SherlockActivity implements OnClickListener, SubmissionListener {
+public class ReceivedGoodsSubmit  extends SherlockActivity implements OnClickListener, SubmissionListener {
 	
 	private EditText name;
 	private Button   submit;
 	private TextView itemCounter;
 	
-	private SubmitPurchaseOrder submitOrder;
+	private SubmitReceivedGoods submitOrder;
 	private TransferHandler    handler;
 	
 	
@@ -48,7 +49,7 @@ public class PurchaseOrderSubmit extends SherlockActivity implements OnClickList
    
    		submit.setOnClickListener(this);   
    
-   		handler = new TransferHandler(this, "Uploading Purchase Orders", "Order Uploaded", "Upload Error");
+   		handler = new TransferHandler(this, "Uploading Received Goods", "Order Uploaded", "Upload Error");
    
    		getSupportActionBar().setHomeButtonEnabled(true);
    		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -60,7 +61,7 @@ public class PurchaseOrderSubmit extends SherlockActivity implements OnClickList
    public boolean onOptionsItemSelected(MenuItem item) {
        switch (item.getItemId()) {
            case android.R.id.home:
-               Intent intent = new Intent(this, PurchaseOrderHome.class);
+               Intent intent = new Intent(this, ReceivedGoodsHome.class);
                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                startActivity(intent);
                return true;
@@ -89,7 +90,7 @@ public class PurchaseOrderSubmit extends SherlockActivity implements OnClickList
 			{
 				Log.d("SUBMIT", "starting");				
 
-				submitOrder = new SubmitPurchaseOrder(handler, name.getText().toString(), getBaseContext(), this);
+				submitOrder = new SubmitReceivedGoods(handler, name.getText().toString(), getBaseContext(), this);
 				
 				submitOrder.start();
 				
@@ -100,7 +101,7 @@ public class PurchaseOrderSubmit extends SherlockActivity implements OnClickList
 	
 	public void updateStockCount() 
 	{		 
-		itemCounter.setText("Order Items: " + Database.getPurchaseOrderItemCount());
+		itemCounter.setText("Order Items: " + Database.getReceivedGoodsItemCount());
 	}
 	
 	public void submitComplete()

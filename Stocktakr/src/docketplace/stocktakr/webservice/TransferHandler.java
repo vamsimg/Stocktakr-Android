@@ -20,6 +20,7 @@ public class TransferHandler extends Handler {
 	public static final int INCORRECT_STOREID = 7;
 	public static final int INCORRECT_PASSWORD = 8;
 	public static final int FINISH = 9;
+	public static final int NO_PRODUCTS = 10;
 	
 	
 	private ProgressDialog progress;
@@ -88,6 +89,8 @@ public class TransferHandler extends Handler {
 	    	case COMPLETE:
 	    		Log.d("PROGRESS", "complete");;
 
+	    		progress.setMax(0);
+	    		progress.setProgress(0);
 	    		progress.dismiss();
 	    		
 	    		Toast.makeText(activity, completedMessage, Toast.LENGTH_SHORT).show();	    		
@@ -134,7 +137,13 @@ public class TransferHandler extends Handler {
 	    		progress.dismiss();
 	    		
 	    		break;
+	    	case NO_PRODUCTS:
+	    		Log.d("PROGRESS", "no products");
+	    			
+	    		progress.dismiss();
 	    		
+	    		Toast.makeText(activity, "No Products", Toast.LENGTH_SHORT).show();
+	    		break;	
 	    	default:
 	    }
 	}

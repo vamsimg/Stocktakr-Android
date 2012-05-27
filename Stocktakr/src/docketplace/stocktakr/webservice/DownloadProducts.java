@@ -209,5 +209,9 @@ public class DownloadProducts extends WebServiceAction {
 				sendMessage(TransferHandler.ERROR);
 			}			
 		}
+		else
+		{
+			sendMessage(TransferHandler.NO_PRODUCTS);		
+		}
 	}
 }

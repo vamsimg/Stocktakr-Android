@@ -18,7 +18,7 @@ import android.widget.*;
 public class Stocktakr extends SherlockActivity implements OnClickListener {
 	private Button downloadProducts;
 	private Button performStocktake;
-	private Button purchaseOrder;
+	private Button transactions;
 	private Button priceCheck;
 
 	private MenuItem settingsMenu;
@@ -40,14 +40,14 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
 
         downloadProducts = (Button)findViewById(R.id.download_products_button);
         performStocktake = (Button)findViewById(R.id.perform_stocktake_button);
-        purchaseOrder    = (Button)findViewById(R.id.purchaseorder_button);
+        transactions    = (Button)findViewById(R.id.transactions_button);
         priceCheck       = (Button)findViewById(R.id.price_check_button);
         
         handler = new TransferHandler(this, "Downloading Products", "Downloaded Products", "Error downloading products");
 
         downloadProducts.setOnClickListener(this);
         performStocktake.setOnClickListener(this);
-        purchaseOrder.setOnClickListener(this);
+        transactions.setOnClickListener(this);
         priceCheck.setOnClickListener(this);
     }
 
@@ -96,9 +96,9 @@ public class Stocktakr extends SherlockActivity implements OnClickListener {
 		{
 			startActivity(new Intent(Stocktakr.this, StocktakeHome.class));
 		}
-		else if (v == purchaseOrder) 
+		else if (v == transactions) 
 		{
-			startActivity(new Intent(Stocktakr.this, PurchaseOrderHome.class));
+			startActivity(new Intent(Stocktakr.this, TransactionsHome.class));
 		}
 		else if (v == priceCheck) 
 		{

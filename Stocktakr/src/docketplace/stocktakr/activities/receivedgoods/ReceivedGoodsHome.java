@@ -1,4 +1,5 @@
-package docketplace.stocktakr.activities.PurchaseOrders;
+package docketplace.stocktakr.activities.receivedgoods;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import docketplace.stocktakr.R;
 import docketplace.stocktakr.activities.Stocktakr;
 import docketplace.stocktakr.data.Database;
 
-public class PurchaseOrderHome extends SherlockActivity implements OnClickListener {
+public class ReceivedGoodsHome extends SherlockActivity implements OnClickListener {
 	
 	private Button scanItem;
 	private Button itemList;
@@ -69,15 +70,15 @@ public class PurchaseOrderHome extends SherlockActivity implements OnClickListen
 	{
 		if (v == scanItem) 
 		{
-			startActivity(new Intent(PurchaseOrderHome.this, PurchaseOrderScanItem.class));
+			startActivity(new Intent(this, ReceivedGoodsScanItem.class));
 		}
 		else if (v == itemList) 
 		{
-			startActivity(new Intent(PurchaseOrderHome.this, PurchaseOrderList.class));
+			startActivity(new Intent(this, ReceivedGoodsList.class));
 		}		
 		else if (v == submitOrder) 
 		{
-			startActivity(new Intent(PurchaseOrderHome.this, PurchaseOrderSubmit.class));
+			startActivity(new Intent(this, ReceivedGoodsSubmit.class));
 		}
 	}
 }

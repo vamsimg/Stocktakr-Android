@@ -1,14 +1,12 @@
-package docketplace.stocktakr.activities.PurchaseOrders;
+package docketplace.stocktakr.activities.receivedgoods;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.WindowManager;
-
+import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,14 +18,13 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 
 import docketplace.stocktakr.R;
+import docketplace.stocktakr.activities.receivedgoods.ReceivedGoodsHome;
 import docketplace.stocktakr.components.QuantityDialog;
 import docketplace.stocktakr.components.QuantityListener;
 import docketplace.stocktakr.data.Database;
-import docketplace.stocktakr.data.PurchaseOrderItem;
+import docketplace.stocktakr.data.ReceivedGoodsItem;
 
-
-
-public class PurchaseOrderScanItem extends SherlockActivity implements OnClickListener, OnEditorActionListener, QuantityListener
+public class ReceivedGoodsScanItem extends SherlockActivity implements OnClickListener, OnEditorActionListener, QuantityListener
 {	
 	public LinearLayout productInfo;
 	public TextView productNotFound;
@@ -43,7 +40,7 @@ public class PurchaseOrderScanItem extends SherlockActivity implements OnClickLi
 	public TextView quantityLabel;
 	public Button   updateQuantity;
 		
-	private PurchaseOrderItem currentItem;
+	private ReceivedGoodsItem currentItem;
 
 	private QuantityDialog quantityDialog;
 
@@ -89,7 +86,7 @@ public class PurchaseOrderScanItem extends SherlockActivity implements OnClickLi
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(this, PurchaseOrderHome.class);
+                Intent intent = new Intent(this, ReceivedGoodsHome.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 return true;
@@ -174,14 +171,14 @@ public class PurchaseOrderScanItem extends SherlockActivity implements OnClickLi
 	}
 	
 
-	private PurchaseOrderItem recordStock(String productCode, String productBarcode, String productDescription) 
+	private ReceivedGoodsItem recordStock(String productCode, String productBarcode, String productDescription) 
 	{	
-		PurchaseOrderItem foundStock  = Database.getPurchaseOrderItem(productCode); 
+		ReceivedGoodsItem foundStock  = Database.getReceivedGoodsItem(productCode); 
 		
 		if(foundStock == null)
 		{
-			foundStock = new PurchaseOrderItem(productCode, productBarcode, productDescription, 1);
-			Database.addPurchaseOrderItem(foundStock);			
+			foundStock = new ReceivedGoodsItem(productCode, productBarcode, productDescription, 1);
+			Database.addReceivedGoodsItem(foundStock);			
 		}
 		
 		return foundStock;
@@ -191,7 +188,7 @@ public class PurchaseOrderScanItem extends SherlockActivity implements OnClickLi
 	public void onChangeQuantity(double newQuantity) 
 	{
 		currentItem.quantity = newQuantity;
-		Database.updatePurchaseOrderItem(currentItem);
+		Database.updateReceivedGoodsItem(currentItem);
 		updateQuantity.setText(String.format("%1$,.2f", newQuantity));
 	}	
 	

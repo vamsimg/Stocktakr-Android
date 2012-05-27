@@ -1,4 +1,4 @@
-package docketplace.stocktakr.activities.PurchaseOrders;
+package docketplace.stocktakr.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,40 +12,32 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 
 import docketplace.stocktakr.R;
-import docketplace.stocktakr.activities.Stocktakr;
+import docketplace.stocktakr.activities.PurchaseOrders.PurchaseOrderHome;
+import docketplace.stocktakr.activities.receivedgoods.ReceivedGoodsHome;
 import docketplace.stocktakr.data.Database;
 
-public class PurchaseOrderHome extends SherlockActivity implements OnClickListener {
+
+public class TransactionsHome extends SherlockActivity implements OnClickListener {
 	
-	private Button scanItem;
-	private Button itemList;
-	private Button submitOrder;
+	private Button purchaseOrder;
+	private Button receivedGoods;
 	
-	private TextView products;
-	
-	
+		
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	setTheme(R.style.Theme_Sherlock_Light);
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.transactionorder_home);
+        setContentView(R.layout.transactions_home);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
        
-        scanItem = (Button)findViewById(R.id.scanitem_button);
-        itemList = (Button)findViewById(R.id.itemslist_button);
-        submitOrder       = (Button)findViewById(R.id.submittransaction_button);
-        products = (TextView)findViewById(R.id.productcount_textView);
-       
-        
-        scanItem.setOnClickListener(this);
-        itemList.setOnClickListener(this);
-        submitOrder.setOnClickListener(this);
-        
-        products.setText("Product Count: " + Database.getProductCount());
-        
+        purchaseOrder = (Button)findViewById(R.id.purchaseorder_button);
+        receivedGoods = (Button)findViewById(R.id.receivedgoods_button);
+                
+        purchaseOrder.setOnClickListener(this);
+        receivedGoods.setOnClickListener(this);
         
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -67,18 +59,13 @@ public class PurchaseOrderHome extends SherlockActivity implements OnClickListen
 
 	public void onClick(View v) 
 	{
-		if (v == scanItem) 
+		if (v == purchaseOrder) 
 		{
-			startActivity(new Intent(PurchaseOrderHome.this, PurchaseOrderScanItem.class));
+			startActivity(new Intent(this, PurchaseOrderHome.class));
 		}
-		else if (v == itemList) 
+		else if (v == receivedGoods) 
 		{
-			startActivity(new Intent(PurchaseOrderHome.this, PurchaseOrderList.class));
-		}		
-		else if (v == submitOrder) 
-		{
-			startActivity(new Intent(PurchaseOrderHome.this, PurchaseOrderSubmit.class));
+			startActivity(new Intent(this, ReceivedGoodsHome.class));
 		}
 	}
 }
-

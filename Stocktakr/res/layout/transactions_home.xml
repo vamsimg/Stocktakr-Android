@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -17,61 +16,33 @@
             android:gravity="center_horizontal"
             android:src="@drawable/stocktakr_logo" />
         
-    </TableRow>
-
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.0" >
-
-        <TextView
-            android:id="@+id/productcount_textView"
-            android:gravity="center" 
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="(Products)" />
-
     </TableRow>   
     
      <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1.0">
-
-        <Button
-			android:id="@+id/scanitem_button"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text="Scan Item"
-			android:layout_margin="8dip"/>
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.0">
         
         <Button
-		    android:id="@+id/itemslist_button"
+		    android:id="@+id/purchaseorder_button"
 		    android:layout_width="fill_parent"
 		    android:layout_height="wrap_content"
-		    android:text="Item List"
+		    android:text="Purchase Order"
 		    android:layout_margin="8dip"/>
     </TableRow>
-
+    
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1.0">
         
         <Button
-			android:id="@+id/submitpurchaseorder_button"
+			android:id="@+id/receivedgoods_button"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="Upload Purchase Order"
-			android:layout_margin="8dip" />
+			android:text="Received Goods"
+			android:layout_margin="8dip" 
+			android:visibility="invisible"/>
     </TableRow>
 
 </TableLayout>

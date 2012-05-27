@@ -29,7 +29,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		db.execSQL("CREATE TABLE stockRecords ( code TEXT, barcode TEXT, description TEXT , quantity REAL, timestamp TEXT)");		
 		
 		// Create PurchaseOrderItems table
-		db.execSQL("CREATE TABLE purchaseOrderItems ( code TEXT, barcode TEXT, description TEXT , quantity REAL)");	
+		db.execSQL("CREATE TABLE purchaseOrderItems ( code TEXT, barcode TEXT, description TEXT , quantity REAL)");
+		
+		// Create ReceivedGoodsItems table
+		db.execSQL("CREATE TABLE receivedGoodsItems ( code TEXT, barcode TEXT, description TEXT , quantity REAL)");	
 	}
 
 	@Override
@@ -39,6 +42,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		db.execSQL("DROP TABLE products;");
 		db.execSQL("DROP TABLE stockRecords;");
 		db.execSQL("DROP TABLE purchaseOrderItems;");
+		db.execSQL("DROP TABLE receivedGoodsItems;");
 		
 		 // Create tables again
         onCreate(db);

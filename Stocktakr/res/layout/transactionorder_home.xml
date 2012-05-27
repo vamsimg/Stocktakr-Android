@@ -15,21 +15,35 @@
             android:layout_height="wrap_content"             
             android:layout_gravity="center_vertical"
             android:gravity="center_horizontal"
-            android:src="@drawable/stocktakr_logo" />        
+            android:src="@drawable/stocktakr_logo" />
+        
     </TableRow>
-    
-    
 
     <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" >
+
+        <TextView
+            android:id="@+id/productcount_textView"
+            android:gravity="center" 
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Products)" />
+
+    </TableRow>   
+    
+     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1.0">
 
         <Button
-			android:id="@+id/price_check_button"
+			android:id="@+id/scanitem_button"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="@string/price_check"
+			android:text="Scan Item"
 			android:layout_margin="8dip"/>
 
     </TableRow>
@@ -40,10 +54,10 @@
         android:layout_weight="1.0">
         
         <Button
-		    android:id="@+id/perform_stocktake_button"
+		    android:id="@+id/itemslist_button"
 		    android:layout_width="fill_parent"
 		    android:layout_height="wrap_content"
-		    android:text="@string/perform_stocktake"
+		    android:text="Item List"
 		    android:layout_margin="8dip"/>
     </TableRow>
 
@@ -53,24 +67,10 @@
         android:layout_weight="1.0">
         
         <Button
-		    android:id="@+id/transactions_button"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:text="Transactions"
-		    android:layout_margin="8dip"/>
-    </TableRow>
-    
-         
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.0">
-        
-        <Button
-			android:id="@+id/download_products_button"
+			android:id="@+id/submittransaction_button"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="@string/download_products"
+			android:text="Upload Order"
 			android:layout_margin="8dip" />
     </TableRow>
 

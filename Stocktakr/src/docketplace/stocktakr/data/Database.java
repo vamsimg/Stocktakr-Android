@@ -355,5 +355,93 @@ public class Database {
 	{		
 		db.delete("purchaseOrderItems", null, null);		
 	}
+	
+	//Received Goods Items CRUD
+    
+    public static void addReceivedGoodsItem(ReceivedGoodsItem item) 
+    {
+        ContentValues values = new ContentValues();
+        values.put("code", item.code);
+        values.put("barcode", item.barcode); 
+        values.put("description", item.description);
+        values.put("quantity", item.quantity);
+                
+        // Inserting Row
+        db.insert("receivedGoodsItems", null, values);       
+    }
+    
+
+    public static ReceivedGoodsItem getReceivedGoodsItem(String code) 
+    {        
+    	ReceivedGoodsItem item = null;
+        
+        Cursor cursor = db.query("receivedGoodsItems", new String[] { "code", "barcode", "description", "quantity"}, "code= ?", new String[] {code} , null, null, null);
+        
+        if(cursor.moveToFirst())
+        {
+        	item = new ReceivedGoodsItem(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getDouble(3));
+        }
+        cursor.close();
+         
+        return item;
+    }
+    
+
+    public static List<ReceivedGoodsItem> getAllReceivedGoodsItems() 
+    {
+        List<ReceivedGoodsItem> recordList = new ArrayList<ReceivedGoodsItem>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM receivedGoodsItems";
+        
+        Cursor cursor = db.rawQuery(selectQuery, null);
+     
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) 
+        {
+            do 
+            {
+            	ReceivedGoodsItem record = new ReceivedGoodsItem(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getDouble(3));
+                // Adding contact to list
+            	 recordList.add(record);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        
+        return recordList;
+    }
+        
+
+	public static int getReceivedGoodsItemCount() 
+	{
+         String countQuery = "SELECT  * FROM receivedGoodsItems";    
+         Cursor cursor = db.rawQuery(countQuery, null);
+         int count  = cursor.getCount(); 
+         cursor.close();
+         // return count
+         return count; 
+    }
+	
+	public static int updateReceivedGoodsItem(ReceivedGoodsItem record) 
+	{	    
+	    ContentValues values = new ContentValues();
+	    values.put("code", record.code);
+        values.put("barcode", record.barcode); 
+        values.put("description", record.description);
+        values.put("quantity", record.quantity);
+        	    
+        
+        int rowsAffected = db.update("receivedGoodsItems", values, "code = ?", new String[] {record.code});
+	    return rowsAffected ;
+	}
+	
+	public static void deleteReceivedGoodsItem(ReceivedGoodsItem record) 
+	{		
+		db.delete("receivedGoodsItems", "code = ?", new String[] {record.code});	
+	}
+	
+	public static void deleteAllReceivedGoodsItems() 
+	{		
+		db.delete("receivedGoodsItems", null, null);		
+	}
 
 }
