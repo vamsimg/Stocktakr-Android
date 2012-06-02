@@ -86,6 +86,10 @@ public class ReceivedGoodsSubmit  extends SherlockActivity implements OnClickLis
 			{
 				Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show();
 			}
+			else if(Database.getReceivedGoodsItemCount() == 0)
+			{
+				Toast.makeText(this, "No received goods items", Toast.LENGTH_SHORT).show();
+			}
 			else
 			{
 				Log.d("SUBMIT", "starting");				

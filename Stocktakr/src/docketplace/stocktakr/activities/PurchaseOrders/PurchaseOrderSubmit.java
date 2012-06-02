@@ -85,6 +85,10 @@ public class PurchaseOrderSubmit extends SherlockActivity implements OnClickList
 			{
 				Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show();
 			}
+			else if(Database.getPurchaseOrderItemCount() == 0)
+			{
+				Toast.makeText(this, "No Purchase Order Items", Toast.LENGTH_SHORT).show();
+			}
 			else
 			{
 				Log.d("SUBMIT", "starting");				

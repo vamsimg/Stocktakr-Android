@@ -83,7 +83,11 @@ public class SubmitRecords  extends SherlockActivity implements OnClickListener,
 			
 			if (personName.length() == 0) 
 			{
-				Toast.makeText(this, "Please enter youer name", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show();
+			}
+			else if(Database.getStockRecordCount() == 0)
+			{
+				Toast.makeText(this, "No stocktake records", Toast.LENGTH_SHORT).show();
 			}
 			else
 			{
