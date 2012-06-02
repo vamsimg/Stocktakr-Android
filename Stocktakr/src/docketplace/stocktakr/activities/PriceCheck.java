@@ -83,7 +83,7 @@ public class PriceCheck extends SherlockActivity implements  OnEditorActionListe
 			} else {
 				description.setText(product.description);				
 				scanned.setText(getString(R.string.barcode_label) + product.barcode);
-				salePrice.setText(getString(R.string.price_label) + product.price);
+				salePrice.setText(getString(R.string.price_label) + "$" + product.price);
 
 				productInfo.setVisibility(View.VISIBLE);
 				productNotFound.setVisibility(View.GONE);

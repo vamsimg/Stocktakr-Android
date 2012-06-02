@@ -34,7 +34,7 @@
 	        android:id="@+id/price_check_description_label"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
 	        android:layout_margin="8dip"
 	        android:text="(description)"/>
 	    
@@ -51,7 +51,7 @@
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_margin="8dip"
-	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
 	        android:text="(price)"/>
     </LinearLayout>
 

@@ -123,7 +123,7 @@ public class PurchaseOrderScanItem extends SherlockActivity implements OnClickLi
 			} else {
 				description.setText(product.description);				
 				scanned.setText("Barcode: " + product.barcode);
-				salePrice.setText("Sale Price: " + product.price);
+				salePrice.setText("Sale Price: " + "$" + product.price);
 				
 				currentItem = recordStock(product.code, product.barcode, product.description);
 				
