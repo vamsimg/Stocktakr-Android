@@ -27,7 +27,7 @@ public class SubmitPurchaseOrder extends WebServiceAction {
 		this.listener = listener;
 	}	
 	
-	private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+	private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
 	
 	public static String currentTimestamp() 
 	{
@@ -68,7 +68,7 @@ public class SubmitPurchaseOrder extends WebServiceAction {
 		{		
 			Log.d("SUBMIT PO", "posting");
 			String deviceDetails = URLEncoder.encode((Build.BRAND + "$" + Build.MODEL  + "$" + Build.VERSION.SDK_INT).replaceAll(" ",""));
-			String encodedPerson = URLEncoder.encode(personName);
+			String encodedPerson = URLEncoder.encode(personName.replace(' ', '_'));
 			String orderDate = URLEncoder.encode(currentTimestamp());
 			
 			int responseCode = rest.post("PurchaseOrderItems", deviceDetails + "/" + encodedPerson + "/" + orderDate , buildItemList().toString());

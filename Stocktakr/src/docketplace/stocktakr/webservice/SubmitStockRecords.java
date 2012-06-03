@@ -143,7 +143,9 @@ public class SubmitStockRecords extends WebServiceAction {
 			Log.d("SUBMIT", "posting");
 			String deviceDetails = URLEncoder.encode((Build.BRAND + "$" + Build.MODEL  + "$" + Build.VERSION.SDK_INT).replaceAll(" ",""));
 			
-			int responseCode = rest.post("ZippedStocktakeTransactions", deviceDetails + "/" + personName, zippedTransactions);
+			String encodedPerson = URLEncoder.encode(personName.replace(' ', '_'));
+			
+			int responseCode = rest.post("ZippedStocktakeTransactions", deviceDetails + "/" + encodedPerson, zippedTransactions);
 			
 			Log.d("SUBMIT", "posted");
 			
