@@ -166,8 +166,8 @@ public class REST {
 	    		
 	    	JSONObject json  = new JSONObject();
 	    	json.put("transactions", data);
-	    		    	
-	    	StringEntity se = new StringEntity(json.toString(),HTTP.UTF_8);
+	    	String jsonOutput = json.toString();    	
+	    	StringEntity se = new StringEntity(jsonOutput,HTTP.UTF_8);
 	    	se.setContentType("application/json");
 	        httppost.setEntity(se);
 
