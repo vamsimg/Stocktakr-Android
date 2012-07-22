@@ -41,7 +41,7 @@ public class StocktakeRecordsList  extends SherlockActivity implements OnItemCli
 	
 	
 	 @Override
-	 public void onCreate(Bundle savedInstanceState) 
+	 public void onCreate(Bundle savedInstanceState)
 	 {
 		setTheme(R.style.Theme_Sherlock_Light);
 		

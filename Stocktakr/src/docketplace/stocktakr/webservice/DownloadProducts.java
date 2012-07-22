@@ -175,7 +175,7 @@ public class DownloadProducts extends WebServiceAction {
 		
 		int i = 0;
 		
-		int blockSize = 5000;
+		int blockSize = 2500;
 		
 		int limit;
 		
